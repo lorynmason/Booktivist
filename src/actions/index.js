@@ -1,6 +1,6 @@
-export const fetchSearch = search => {
+export const addSearchResults = search => {
   return {
-    type: 'FETCH_SEARCH',
+    type: 'ADD_RESULTS',
     search: search,
   }
 }
