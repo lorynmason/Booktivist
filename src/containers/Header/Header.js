@@ -1,6 +1,6 @@
-import React, {Component } from 'react';
+import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { fetchSearch } from '../../actions'
+import { fetchBooks } from '../../thunks/fetchBooks'
 
 export class Header extends Component {
   constructor(){
@@ -12,7 +12,7 @@ export class Header extends Component {
 
   handleSubmit = (e) => {
     e.preventDefault()
-    // this.props.sendSearch(this.state)
+    this.props.sendSearch(this.state.search)
   }
 
   handleChange = (e) => {
@@ -45,7 +45,7 @@ export class Header extends Component {
 // });
 
 export const mapDispatchToProps = dispatch => ({
-  sendSearch: search => dispatch(fetchSearch(search))
+  sendSearch: search => dispatch(fetchBooks(search))
 });
 
 export default connect(
