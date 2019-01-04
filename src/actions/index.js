@@ -11,3 +11,10 @@ export const addSearchInfo = info => {
     info,
   }
 }
+
+export const addMessage = message => {
+  return {
+    type: 'ADD_MESSAGE',
+    message
+  }
+}
