@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Header from '../../containers/Header/Header'
+import CardContainer from '../CardContainer/CardContainer'
 import '../../styles/main.scss'
 import { connect } from 'react-redux';
 
@@ -13,6 +14,7 @@ class App extends Component {
     return (
       <div className="App">
         <Header />
+        <CardContainer />
       </div>
     );
   }
