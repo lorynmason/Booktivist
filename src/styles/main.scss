@@ -1,8 +1,16 @@
 //fonts 
 @import url('https://fonts.googleapis.com/css?family=Engagement');
-$mainFont: 'Engagement', cursive;
+$titleFont: 'Engagement', cursive;
 
+@import url('https://fonts.googleapis.com/css?family=Anaheim');
+$mainFont: 'Anaheim', sans-serif;
+
+//colors
+// $backroundColor: rgba(160, 137, 107, 0.5);
+$backroundColor: rgb(160, 149, 133);
 
 
 @import "Reset";
 @import "Header";
+@import "Card";
+@import "CardContainer";
