@@ -6,13 +6,15 @@ export class Header extends Component {
   constructor(){
     super()
     this.state = {
-      search: ''
+      search: '',
+      header: false
     }
   }
 
   handleSubmit = (e) => {
     e.preventDefault()
     this.props.sendSearch(this.state.search)
+    this.setState({header: true})
   }
 
   handleChange = (e) => {
@@ -23,8 +25,13 @@ export class Header extends Component {
   }
 
   render() {
+    const { header } = this.state
+    let headerClass = 'header-false'
+    if(header) {
+      headerClass = 'header-true'
+    }
     return (
-      <header>
+      <header className={headerClass}>
         <div className="title-search">
           <h1>Booktivist</h1>
           <h3>Read up, so you can Speak up</h3>
