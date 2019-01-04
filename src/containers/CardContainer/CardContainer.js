@@ -1,10 +1,11 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { Card } from '../../components/Card/Card'
+import { addBookList } from '../../actions'
 
-export const CardContainer = ({ results, info }) => {
+export const CardContainer = ({ results, info, addBookList }) => {
   const cards = results.map(result => {
-    return <Card result={result} />
+    return <Card result={result} addBookList={addBookList}/>
   })
 
   return (
@@ -29,7 +30,7 @@ export const mapStateToProps = state => ({
 });
 
 export const mapDispatchToProps = dispatch => ({
- 
+  addBookList: book => dispatch(addBookList(book))
 });
 
 export default connect(
