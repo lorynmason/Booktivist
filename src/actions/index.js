@@ -18,3 +18,10 @@ export const addMessage = message => {
     message
   }
 }
+
+export const addBookList = book => {
+  return {
+    type: 'ADD_BOOK_LIST',
+    book
+  }
+}
