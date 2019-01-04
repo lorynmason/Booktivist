@@ -1,6 +1,5 @@
 import { key } from '../apikey';
-import { addSearchResults } from '../actions'
-import { addSearchInfo } from '../actions'
+import { addSearchResults, addSearchInfo, addMessage } from '../actions'
 
 
 export const fetchBooks = (search) => {
@@ -14,8 +13,7 @@ export const fetchBooks = (search) => {
       dispatch(addSearchResults(results.Similar.Results))
       dispatch(addSearchInfo(results.Similar.Info))
     } catch (err) {
-      console.log(err)
-      // dispatch(hasErrored(err.message))
+      dispatch(addMessage(err.message))
     }
   }
 }
