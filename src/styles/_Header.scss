@@ -1,13 +1,13 @@
-header {
+@mixin headers($height, $imgHeight) {
   img {
-    height: 700px;
+    height: $imgHeight;
   }
   display: flex;
   justify-content: center;
   align-items: center;
-  background:rgba(210, 180, 140, 0.5);
+  background:rgba(160, 137, 107, 0.5);
   width: 100%;
-  height: 100vh;
+  height: $height;
   font-family: $mainFont;
   div { 
     text-align: center;
@@ -38,6 +38,28 @@ header {
       font-size: 1.6rem;
       font-family: $mainFont;
       background: #04BAF4;
+      outline: none;
+    }
+  }
+}
+
+.header-false {
+  @include headers(100vh, 700px);
+}
+
+.header-true {
+  @include headers(40vh, 300px);
+  img {
+    animation: shrink 2.5s linear;
+  }
+  animation: shrink 2.5s linear;
+}
+
+@keyframes shrink {
+  0%{
+    height: 100vh;
+    img {
+      height: 675px;
     }
   }
 }
