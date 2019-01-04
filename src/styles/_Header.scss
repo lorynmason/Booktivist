@@ -50,9 +50,9 @@
 .header-true {
   @include headers(40vh, 300px);
   img {
-    animation: shrink 2.5s linear;
+    animation: shrink 1.5s linear;
   }
-  animation: shrink 2.5s linear;
+  animation: shrink 1.5s linear;
 }
 
 @keyframes shrink {

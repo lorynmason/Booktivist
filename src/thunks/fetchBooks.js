@@ -1,5 +1,6 @@
 import { key } from '../apikey';
 import { addSearchResults } from '../actions'
+import { addSearchInfo } from '../actions'
 
 
 export const fetchBooks = (search) => {
@@ -9,8 +10,9 @@ export const fetchBooks = (search) => {
       if(!response.ok) {
       }
       const results = await response.json()
-      console.log(results)
-      dispatch(addSearchResults(results.Similar))
+      console.log(results.Similar)
+      dispatch(addSearchResults(results.Similar.Results))
+      dispatch(addSearchInfo(results.Similar.Info))
     } catch (err) {
       console.log(err)
     }

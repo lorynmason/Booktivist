@@ -1,6 +1,8 @@
 import { combineReducers } from 'redux';
-import { bookReducer } from './bookReducer';
+import { resultsReducer } from './resultsReducer';
+import { infoReducer } from './infoReducer'
 
 export const rootReducer = combineReducers({
-  books: bookReducer
+  results: resultsReducer,
+  info: infoReducer
 })

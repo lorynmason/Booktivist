@@ -1,9 +1,9 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-export const CardContainer = ({ books }) => {
-  const cards = books.map( book => {
-    return <p>{book.Name}</p>
+export const CardContainer = ({ results }) => {
+  const cards = results.map( result => {
+    return <p>{result.Name}</p>
   })
 
   return (
@@ -22,7 +22,7 @@ export const CardContainer = ({ books }) => {
 }
 
 export const mapStateToProps = state => ({
-  books: state.books
+  results: state.results
 });
 
 export const mapDispatchToProps = dispatch => ({
