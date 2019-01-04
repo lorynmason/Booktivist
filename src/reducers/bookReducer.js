@@ -1,9 +1,7 @@
 export const bookReducer = (state=[], action) => {
   switch(action.type) {
     case 'ADD_RESULTS':
-      return [
-        ...action.search.Info, ...action.search.Results
-      ]
+      return action.results
     default:
       return state
   }
