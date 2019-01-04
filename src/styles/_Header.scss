@@ -5,10 +5,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background:rgba(160, 137, 107, 0.5);
+  background: $backroundColor;
   width: 100%;
   height: $height;
-  font-family: $mainFont;
+  font-family: $titleFont;
   div { 
     text-align: center;
     margin: 10px 40px;
@@ -24,10 +24,10 @@
       width: 220px;
       height: 30px;
       outline: none;
-      font-family: $mainFont;
+      font-family: $titleFont;
       font-size: 1.6rem;
       &::placeholder{
-        font-family: $mainFont;
+        font-family: $titleFont;
         font-size: 1.6rem;
       }
     }
@@ -36,7 +36,7 @@
       width: 90px;
       border: none;
       font-size: 1.6rem;
-      font-family: $mainFont;
+      font-family: $titleFont;
       background: #04BAF4;
       outline: none;
     }

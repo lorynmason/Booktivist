@@ -14,6 +14,7 @@ export const fetchBooks = (search) => {
       dispatch(addSearchInfo(results.Similar.Info))
     } catch (err) {
       console.log(err)
+      
     }
   }
 }
