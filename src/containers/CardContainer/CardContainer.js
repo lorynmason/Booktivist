@@ -11,7 +11,7 @@ export const CardContainer = ({ results, info }) => {
     <main>
       <div className="top-card-container">
         <div className="top-card">
-        <button><i class="far fa-star"></i></button>
+        <button><i className="far fa-star"></i></button>
           <h1>{info.Name}</h1>
           <p>{info.wTeaser}</p>
         </div>
