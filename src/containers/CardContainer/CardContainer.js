@@ -1,9 +1,10 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { Card } from '../../components/Card/Card'
 
 export const CardContainer = ({ results, info }) => {
-  const cards = results.map( result => {
-    return <p>{result.Name}</p>
+  const cards = results.map(result => {
+    return <Card result={result} />
   })
 
   return (
