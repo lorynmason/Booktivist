@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { fetchBooks } from '../../thunks/fetchBooks'
+import { fetchBooks } from '../../thunks/fetchBooks';
+import { Link } from 'react-router-dom';
 
 export class Header extends Component {
   constructor(){
@@ -37,7 +38,7 @@ export class Header extends Component {
           <h3>Read up, so you can Speak up</h3>
           <form onSubmit={this.handleSubmit}>
             <input placeholder="Search for Authors or Books" name="search" value={this.search} onChange={this.handleChange}></input>
-            <button>Search</button>
+            <Link to="/SearchResults"><button onClick={this.handleSubmit}>Search</button></Link>
           </form>
         </div>
         <img src='https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Fist.svg/2000px-Fist.svg.png' alt='activist fist'/>
