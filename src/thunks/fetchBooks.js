@@ -10,7 +10,6 @@ export const fetchBooks = (search) => {
       if(!response.ok) {
       }
       const results = await response.json()
-      console.log(results.Similar)
       dispatch(addSearchResults(results.Similar.Results))
       dispatch(addSearchInfo(results.Similar.Info))
     } catch (err) {
