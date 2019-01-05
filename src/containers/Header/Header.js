@@ -38,7 +38,7 @@ export class Header extends Component {
           <h3>Read up, so you can Speak up</h3>
           <form onSubmit={this.handleSubmit}>
             <input placeholder="Search for Authors or Books" name="search" value={this.search} onChange={this.handleChange}></input>
-            <Link to="/SearchResults"><button onClick={this.handleSubmit}>Search</button></Link>
+            <button onClick={this.handleSubmit}><Link to="/SearchResults">Search</Link></button>
           </form>
         </div>
         <img src='https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Fist.svg/2000px-Fist.svg.png' alt='activist fist'/>
