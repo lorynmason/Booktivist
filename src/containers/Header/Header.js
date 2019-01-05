@@ -13,8 +13,12 @@ export class Header extends Component {
   }
 
   componentDidMount(){
-    if(this.props.location.pathname !== '/' ) {
+    const { pathname } = this.props.location
+    if(pathname !== '/' ) {
       this.setState({header: true})
+    }
+    if(pathname === '/' ) {
+      this.setState({header: false})
     }
   }
 
@@ -39,7 +43,7 @@ export class Header extends Component {
     }
     return (
       <div>
-        <Link to='/MustReadList'>Must Read List</Link>
+        <Link to='/MustReadList' className='header-link'>Must Read List</Link>
         <header className={headerClass}>
           <div className="title-search">
             <h1>Booktivist</h1>

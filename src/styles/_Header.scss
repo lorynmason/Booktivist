@@ -5,7 +5,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: $backroundColor;
+  background: $backgroundColor;
   width: 100%;
   height: $height;
   font-family: $titleFont;
@@ -43,6 +43,17 @@
   }
 }
 
+div {
+  background: $backgroundColor;
+  .header-link {
+    font-family: $titleFont;
+    text-decoration: none;
+    font-size: 2rem;
+    color: black;
+    float: right;
+    margin: 15px;
+  }
+}
 .header-false {
   @include headers(100vh, 700px);
 }

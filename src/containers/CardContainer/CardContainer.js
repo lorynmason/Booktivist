@@ -3,17 +3,28 @@ import { connect } from 'react-redux';
 import { Card } from '../../components/Card/Card'
 import { addBookList } from '../../actions'
 
-export const CardContainer = ({ results, info, addBookList }) => {
-  const cards = results.map(result => {
+export const CardContainer = ({ results, info, addBookList, location, bookList }) => {
+  let cards = results.map(result => {
     return <Card result={result} addBookList={addBookList}/>
   })
-  // if()
-
+  if (location.pathname === '/MustReadList') {
+    cards = bookList.map(result => {
+      return <Card result={result} addBookList={addBookList}/>
+    })
+    return (
+      <main>
+        <h2>Must Read List</h2>
+        <div className="card-container">
+          {cards}
+        </div>
+      </main>
+    )
+  }
   return (
     <main>
       <div className="top-card-container">
         <div className="top-card">
-        <button><i className="far fa-star" onClick={()=>addBookList(info.Name)}></i></button>
+        <button><i className="far fa-star" onClick={()=>addBookList(info)}></i></button>
           <h1>{info.Name}</h1>
           <p>{info.wTeaser}</p>
         </div>
@@ -28,7 +39,8 @@ export const CardContainer = ({ results, info, addBookList }) => {
 
 export const mapStateToProps = state => ({
   results: state.results,
-  info: state.info
+  info: state.info,
+  bookList: state.bookList
 });
 
 export const mapDispatchToProps = dispatch => ({
