@@ -3,24 +3,33 @@ import { connect } from 'react-redux';
 import { Card } from '../../components/Card/Card'
 import { addBookList } from '../../actions'
 
-export const CardContainer = ({ results, info, addBookList, location, bookList }) => {
+export const CardContainer = ({ results, info, addBookList, location}) => {
+  
   const handleClick = () => {
     const oldbookList = JSON.parse(localStorage.getItem('bookList'))
     if(oldbookList) {
       const updatedList = [...oldbookList, info]
-      console.log(updatedList)
       localStorage.setItem('bookList', JSON.stringify(updatedList))
     } else {
       localStorage.setItem('bookList', JSON.stringify([info]))
     }
   }
+
   let cards = results.map(result => {
-    return <Card result={result} addBookList={addBookList}/>
+    let isFavorite = false;
+    const bookList = JSON.parse(localStorage.getItem('bookList'))
+    bookList.forEach(book => {
+      if (book.Name === result.Name) {
+        isFavorite = true;
+      }
+    });
+    return <Card result={result} addBookList={addBookList} isFavorite={isFavorite}/>
   })
+
   if (location.pathname === '/MustReadList') {
     const list = JSON.parse(localStorage.getItem('bookList'))
     cards = list.map(result => {
-      return <Card result={result} addBookList={addBookList}/>
+      return <Card result={result} addBookList={addBookList} isFavorite={true}/>
     })
     return (
       <main>
@@ -51,7 +60,6 @@ export const CardContainer = ({ results, info, addBookList, location, bookList }
 export const mapStateToProps = state => ({
   results: state.results,
   info: state.info,
-  bookList: state.bookList
 });
 
 export const mapDispatchToProps = dispatch => ({
