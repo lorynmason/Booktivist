@@ -7,6 +7,7 @@ export const CardContainer = ({ results, info, addBookList }) => {
   const cards = results.map(result => {
     return <Card result={result} addBookList={addBookList}/>
   })
+  // if()
 
   return (
     <main>
@@ -17,6 +18,7 @@ export const CardContainer = ({ results, info, addBookList }) => {
           <p>{info.wTeaser}</p>
         </div>
       </div>
+      <h2>Recomendations</h2>
       <div className="card-container">
         {cards}
       </div>
