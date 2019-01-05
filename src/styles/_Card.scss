@@ -8,10 +8,10 @@
     font-size: 1.3rem;
     padding: 5px;
   }
-  font-family: $mainFont;
-  background: $backroundColor;
-  height: 400px;
   overflow-y: scroll;
+  font-family: $mainFont;
+  background: rgba(7, 104, 173, 0.945);
+  height: 450px;
 }
 .top-card {
   @include card();
