@@ -4,11 +4,22 @@ import { Card } from '../../components/Card/Card'
 import { addBookList } from '../../actions'
 
 export const CardContainer = ({ results, info, addBookList, location, bookList }) => {
+  const handleClick = () => {
+    const oldbookList = JSON.parse(localStorage.getItem('bookList'))
+    if(oldbookList) {
+      const updatedList = [...oldbookList, info]
+      console.log(updatedList)
+      localStorage.setItem('bookList', JSON.stringify(updatedList))
+    } else {
+      localStorage.setItem('bookList', JSON.stringify([info]))
+    }
+  }
   let cards = results.map(result => {
     return <Card result={result} addBookList={addBookList}/>
   })
   if (location.pathname === '/MustReadList') {
-    cards = bookList.map(result => {
+    const list = JSON.parse(localStorage.getItem('bookList'))
+    cards = list.map(result => {
       return <Card result={result} addBookList={addBookList}/>
     })
     return (
@@ -24,7 +35,7 @@ export const CardContainer = ({ results, info, addBookList, location, bookList }
     <main>
       <div className="top-card-container">
         <div className="top-card">
-        <button><i className="far fa-star" onClick={()=>addBookList(info)}></i></button>
+        <button><i className="far fa-star" onClick={handleClick}></i></button>
           <h1>{info.Name}</h1>
           <p>{info.wTeaser}</p>
         </div>

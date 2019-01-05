@@ -1,3 +1,7 @@
+// $accentColor: #04BAF4;
+$accentColor: rgb(7, 104, 173);
+
+
 @mixin headers($height, $imgHeight) {
   img {
     height: $imgHeight;
@@ -9,24 +13,25 @@
   width: 100%;
   height: $height;
   font-family: $titleFont;
+  color: rgb(0, 0, 0);
   div { 
     text-align: center;
     margin: 10px 40px;
     h1{
       font-size: 10rem;
-      text-shadow: 6px 3px #04BAF4;
+      text-shadow: 6px 3px $accentColor;
     }
     h3 {
       font-size: 4rem;
     }
-    input{
+    input {
       margin-top: 25px;
       width: 220px;
       height: 30px;
       outline: none;
       font-family: $titleFont;
       font-size: 1.6rem;
-      &::placeholder{
+      &::placeholder {
         font-family: $titleFont;
         font-size: 1.6rem;
       }
@@ -37,13 +42,17 @@
       border: none;
       font-size: 1.6rem;
       font-family: $titleFont;
-      background: #04BAF4;
+      background: $accentColor;
       outline: none;
+      a {
+        text-decoration: none;
+        color: black;
+      }
     }
   }
 }
 
-div {
+.links {
   background: $backgroundColor;
   .header-link {
     font-family: $titleFont;

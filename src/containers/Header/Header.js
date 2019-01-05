@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { fetchBooks } from '../../thunks/fetchBooks';
 import { Link } from 'react-router-dom';
+import { Switch, Route, Redirect, withRouter } from 'react-router';
+
 
 export class Header extends Component {
   constructor(){
@@ -14,9 +16,9 @@ export class Header extends Component {
 
   componentDidMount(){
     const { pathname } = this.props.location
-    if(pathname !== '/' ) {
-      this.setState({header: true})
-    }
+    if(pathname === '/' ) {
+      this.setState({header: false})
+    } 
     if(pathname === '/' ) {
       this.setState({header: false})
     }
@@ -42,12 +44,12 @@ export class Header extends Component {
       headerClass = 'header-true'
     }
     return (
-      <div>
+      <div className='links'>
         <Link to='/MustReadList' className='header-link'>Must Read List</Link>
         <header className={headerClass}>
           <div className="title-search">
             <h1>Booktivist</h1>
-            <h3>Read up, so you can Speak up</h3>
+            <h3>Read up, so You can Speak up</h3>
             <form onSubmit={this.handleSubmit}>
               <input placeholder="Search for Authors or Books" name="search" value={this.search} onChange={this.handleChange}></input>
               <button onClick={this.handleSubmit}><Link to="/SearchResults">Search</Link></button>
@@ -69,7 +71,7 @@ export const mapDispatchToProps = dispatch => ({
   sendSearch: search => dispatch(fetchBooks(search))
 });
 
-export default connect(
+export default withRouter(connect(
   null,
   mapDispatchToProps
-)(Header);
+)(Header));
