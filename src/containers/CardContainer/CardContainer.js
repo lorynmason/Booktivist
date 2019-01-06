@@ -6,6 +6,7 @@ import { addMessage } from '../../actions';
 import { addBookList } from '../../thunks/addBookList';
 import { removeBookList } from '../../thunks/removeBookList';
 import { fetchBooks } from '../../thunks/fetchBooks';
+import { Switch, Route, Redirect, withRouter } from 'react-router';
 
 export const CardContainer = ({ results, info, location, addBookList, removeBookList, bookList, sendSearch}) => {
 
@@ -14,6 +15,12 @@ export const CardContainer = ({ results, info, location, addBookList, removeBook
   let cards = results.map(result => {
     return <Card result={result} addBookList={addBookList} removeBookList={removeBookList} bookList={bookList} sendSearch={sendSearch}/>
   })
+
+  let page;
+
+  if (location.pathname === '/SearchResults' && !results.length) {
+    page = <Redirect to='/' />
+  }
 
   if (location.pathname === '/MustReadList') {
     if (bookList.length) {
@@ -36,6 +43,7 @@ export const CardContainer = ({ results, info, location, addBookList, removeBook
   return (
     <main>
       <Message />
+      {page}
       <div className="top-card-container">
         {infoCard}
       </div>

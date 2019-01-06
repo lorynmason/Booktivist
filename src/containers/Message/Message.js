@@ -3,7 +3,6 @@ import { connect } from 'react-redux';
 import { addMessage } from '../../actions';
 
 export const Message = (props) => {
-  console.log(props)
   setTimeout(() => {
     props.addMessage('')
   }, 5000);

@@ -16,7 +16,6 @@ export class Header extends Component {
 
   componentDidMount(){
     const { pathname } = this.props.location
-    console.log(this.props)
     if(pathname === '/' ) {
     this.setState({header: false})      
     } 
@@ -24,8 +23,10 @@ export class Header extends Component {
 
   handleSubmit = (e) => {
     e.preventDefault()
-    this.props.sendSearch(this.state.search)
-    this.setState({header: true})
+    if (this.state.search) {
+      this.props.sendSearch(this.state.search)
+      this.setState({header: true, search: ''})
+    }
   }
 
   handleChange = (e) => {
