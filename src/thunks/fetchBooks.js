@@ -12,6 +12,9 @@ export const fetchBooks = (search) => {
       const results = await response.json()
       dispatch(addSearchResults(results.Similar.Results))
       dispatch(addSearchInfo(results.Similar.Info))
+      if (results.Similar.Results.length) {
+        dispatch(addMessage(`Found Similar Books!`))
+      }
     } catch (err) {
       dispatch(addMessage(err.message))
     }
