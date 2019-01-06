@@ -1,22 +1,48 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-export const Card = ({ result, isFavorite, addBookList, removeBookList }) => {
-  const handleClick = () => {
+export class Card  extends Component{ 
+  constructor(){
+    super()
+    this.state = {
+      isFavorite: false
+    }
+  }
+
+  componentDidMount() {
+    this.props.bookList.forEach(book => {
+      if (book.Name === this.props.result.Name) {
+        this.toggleFavorite()
+      }
+    })
+  }
+
+  toggleFavorite = () => {
+    const { isFavorite } = this.state
+    this.setState({isFavorite: !isFavorite})
+  }
+
+  handleClick = () => {
+    const { isFavorite } = this.state
     if(!isFavorite) {
-      addBookList(result)
+      this.props.addBookList(this.props.result)
      } else {
-      removeBookList(result)
+      this.props.removeBookList(this.props.result)
      }
+    this.toggleFavorite()
   }
-  let star = 'far fa-star'
-  if (isFavorite) {
-    star = 'fas fa-star'
-  }
-  return (
-    <div className="card" key={result.Name}>
-      <button><i className={star} onClick={handleClick}></i></button>
-      <h1>{result.Name}</h1>
-      <p>{result.wTeaser}</p>
+
+  render() {
+    let star = 'far fa-star'
+    const { isFavorite } = this.state
+    if (isFavorite) {
+      star = 'fas fa-star'
+    }
+    return (
+    <div className="card" key={this.props.result.Name}>
+      <button><i className={star} onClick={this.handleClick}></i></button>
+      <h1>{this.props.result.Name}</h1>
+      <p>{this.props.result.wTeaser}</p>
     </div>
-  )
+    )
+  } 
 }

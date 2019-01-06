@@ -6,6 +6,9 @@ import { connect } from 'react-redux';
 import { Switch, Route, Redirect, withRouter } from 'react-router';
 
 class App extends Component {
+  // componentDidMount(){
+
+  // }
 
   render() {
     return (

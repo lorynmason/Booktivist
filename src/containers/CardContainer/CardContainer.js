@@ -8,27 +8,15 @@ import { removeBookList } from '../../thunks/removeBookList';
 
 export const CardContainer = ({ results, info, location, addBookList, removeBookList, bookList}) => {
 
-  let isFavorite = false;
-
-  let infoCard = bookList.map(book => {
-    if (book.Name === info.Name) {
-      isFavorite = true;
-    }
-    return <Card result={info} isFavorite={isFavorite} addBookList={addBookList} removeBookList={removeBookList}/>
-  })
+  let infoCard = <Card result={info} addBookList={addBookList} removeBookList={removeBookList} bookList={bookList} />
 
   let cards = results.map(result => {
-    bookList.forEach(book => {
-      if (book.Name === result.Name) {
-        isFavorite = true;
-      }
-    });
-    return <Card result={result} isFavorite={isFavorite} addBookList={addBookList} removeBookList={removeBookList}/>
+    return <Card result={result} addBookList={addBookList} removeBookList={removeBookList} bookList={bookList} />
   })
 
   if (location.pathname === '/MustReadList') {
     cards = bookList.map(result => {
-      return <Card result={result} isFavorite={true} addBookList={addBookList} removeBookList={removeBookList} />
+      return <Card result={result} addBookList={addBookList} removeBookList={removeBookList} bookList={bookList} />
     })
     return (
       <main>
