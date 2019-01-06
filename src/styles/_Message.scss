@@ -1,0 +1,35 @@
+.message-container {
+  border: 2px solid $accentColor;
+  background: rgba(0, 0, 0, 0.692);
+  font-family: $mainFont;
+  color: white;
+  font-size: 1.3em;
+  padding: 5px;
+  width: 600px;
+  position: sticky;
+  z-index: 10;
+  text-align: center;
+  margin: 0 auto 15px;
+  top: 100px;
+  animation: fade 5s linear;
+  opacity: 0;
+}
+
+@keyframes fade {
+  0%{
+    opacity: .2;
+  }
+  5%{
+    opacity: 1;
+  }
+  90%{
+    opacity: 1;
+  }
+  100%{
+    opacity: .2;
+  }
+}
+
+.blah {
+  height: 49px;
+}
