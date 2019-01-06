@@ -39,3 +39,8 @@ export const retrieveBookList = bookList => {
     bookList
   }
 }
+
+export const isLoading = (bool) => ({
+  type: 'IS_LOADING',
+  isLoading: bool
+})

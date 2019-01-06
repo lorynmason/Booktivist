@@ -1,0 +1,43 @@
+.loader {
+  color: #000;
+  margin: 5px 0;
+  text-transform: uppercase;
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+  font-size: 3rem;
+  letter-spacing: 2px;
+  margin: 0 auto;
+}
+
+.loader .line {
+  width: 50px;
+  background: #000;
+  font-size: 4rem;
+  margin: 5px;
+  display: inline-block;
+  animation: opacity 1000ms infinite ease-in-out;
+}
+
+.loader .line-1 { animation-delay: 800ms; }
+.loader .line-2 { animation-delay: 600ms; }
+.loader .line-3 { animation-delay: 400ms; }
+.loader .line-4 { animation-delay: 200ms; }
+.loader .line-6 { animation-delay: 200ms; }
+.loader .line-7 { animation-delay: 400ms; }
+.loader .line-8 { animation-delay: 600ms; }
+.loader .line-9 { animation-delay: 800ms; }
+
+@keyframes opacity { 
+  0% { 
+    opacity: 1;
+    height: 40px;
+  }
+  50% { 
+    opacity: 0;
+    height: 35px;
+  }
+  100% { 
+    opacity: 1;
+    height: 40px;
+  }  
+}
