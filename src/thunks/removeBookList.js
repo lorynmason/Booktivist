@@ -1,10 +1,10 @@
-import { removeBookList } from '../actions'
+import { removeFromBookList } from '../actions'
 
-export const addBookList = (book) => {
+export const removeBookList = (book) => {
   return dispatch => {
     const oldbookList = JSON.parse(localStorage.getItem('bookList'))
-    const updatedList = oldbookList.filter(book => book.Name !== result.Name)
+    const updatedList = oldbookList.filter(item => item.Name !== book.Name)
     localStorage.setItem('bookList', JSON.stringify(updatedList))
-    dispatch(removeBookList(updatedList))
+    dispatch(removeFromBookList(updatedList))
   }
 }

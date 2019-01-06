@@ -19,14 +19,14 @@ export const addMessage = message => {
   }
 }
 
-export const addBookList = bookList => {
+export const addToBookList = bookList => {
   return {
     type: 'ADD_BOOK',
     bookList
   }
 }
 
-export const removeBookList = bookList => {
+export const removeFromBookList = bookList => {
   return {
     type: 'REMOVE_BOOK',
     bookList

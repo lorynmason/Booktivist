@@ -1,19 +1,12 @@
 import React from 'react';
 
-export const Card = ({ result, isFavorite }) => {
+export const Card = ({ result, isFavorite, addBookList, removeBookList }) => {
   const handleClick = () => {
-    const oldbookList = JSON.parse(localStorage.getItem('bookList'))
     if(!isFavorite) {
-      if(oldbookList) {
-        const updatedList = [...oldbookList, result]
-        localStorage.setItem('bookList', JSON.stringify(updatedList))
-      } else {
-        localStorage.setItem('bookList', JSON.stringify([result]))
-      }
-    } else {
-      const updatedList = oldbookList.filter(book => book.Name !== result.Name)
-      localStorage.setItem('bookList', JSON.stringify(updatedList))
-    }
+      addBookList(result)
+     } else {
+      removeBookList(result)
+     }
   }
   let star = 'far fa-star'
   if (isFavorite) {

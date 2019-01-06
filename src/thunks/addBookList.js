@@ -1,4 +1,4 @@
-import { addBookList } from '../actions'
+import { addToBookList } from '../actions'
 
 export const addBookList = (book) => {
   return dispatch => {
@@ -6,10 +6,10 @@ export const addBookList = (book) => {
     if(oldbookList) {
       const updatedList = [...oldbookList, book]
       localStorage.setItem('bookList', JSON.stringify(updatedList))
-      dispatch(addBookList(updatedList))
+      dispatch(addToBookList(updatedList))
     } else {
       localStorage.setItem('bookList', JSON.stringify([book]))
-      dispatch(addBookList([book]))
+      dispatch(addToBookList([book]))
     }
   }
 }

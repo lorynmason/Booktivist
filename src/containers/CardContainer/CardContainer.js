@@ -3,34 +3,32 @@ import { connect } from 'react-redux';
 import { Card } from '../../components/Card/Card'
 import Message from '../Message/Message';
 import { addMessage } from '../../actions';
+import { addBookList } from '../../thunks/addBookList';
+import { removeBookList } from '../../thunks/removeBookList';
 
-export const CardContainer = ({ results, info, location}) => {
-  
-  const handleClick = () => {
-    const oldbookList = JSON.parse(localStorage.getItem('bookList'))
-    if(oldbookList) {
-      const updatedList = [...oldbookList, info]
-      localStorage.setItem('bookList', JSON.stringify(updatedList))
-    } else {
-      localStorage.setItem('bookList', JSON.stringify([info]))
+export const CardContainer = ({ results, info, location, addBookList, removeBookList, bookList}) => {
+
+  let isFavorite = false;
+
+  let infoCard = bookList.map(book => {
+    if (book.Name === info.Name) {
+      isFavorite = true;
     }
-  }
+    return <Card result={info} isFavorite={isFavorite} addBookList={addBookList} removeBookList={removeBookList}/>
+  })
 
   let cards = results.map(result => {
-    let isFavorite = false;
-    const bookList = JSON.parse(localStorage.getItem('bookList'))
     bookList.forEach(book => {
       if (book.Name === result.Name) {
         isFavorite = true;
       }
     });
-    return <Card result={result} isFavorite={isFavorite}/>
+    return <Card result={result} isFavorite={isFavorite} addBookList={addBookList} removeBookList={removeBookList}/>
   })
 
   if (location.pathname === '/MustReadList') {
-    const list = JSON.parse(localStorage.getItem('bookList'))
-    cards = list.map(result => {
-      return <Card result={result} isFavorite={true}/>
+    cards = bookList.map(result => {
+      return <Card result={result} isFavorite={true} addBookList={addBookList} removeBookList={removeBookList} />
     })
     return (
       <main>
@@ -45,11 +43,7 @@ export const CardContainer = ({ results, info, location}) => {
     <main>
       <Message />
       <div className="top-card-container">
-        <div className="top-card">
-        <button><i className="far fa-star" onClick={handleClick}></i></button>
-          <h1>{info.Name}</h1>
-          <p>{info.wTeaser}</p>
-        </div>
+        {infoCard}
       </div>
       <h2>Recomendations</h2>
       <div className="card-container">
@@ -62,11 +56,14 @@ export const CardContainer = ({ results, info, location}) => {
 export const mapStateToProps = state => ({
   results: state.results,
   info: state.info,
-  message: state.message
+  message: state.message,
+  bookList: state.bookList
 });
 
 export const mapDispatchToProps = dispatch => ({
-  addMessage: message => dispatch(addMessage(message))
+  addMessage: message => dispatch(addMessage(message)),
+  addBookList: book => dispatch(addBookList(book)),
+  removeBookList: book => dispatch(removeBookList(book))
 });
 
 export default connect(
