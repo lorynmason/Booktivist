@@ -10,18 +10,16 @@ export class Header extends Component {
     super()
     this.state = {
       search: '',
-      header: false
+      header: true
     }
   }
 
   componentDidMount(){
     const { pathname } = this.props.location
+    console.log(this.props)
     if(pathname === '/' ) {
-      this.setState({header: false})
+    this.setState({header: false})      
     } 
-    if(pathname === '/' ) {
-      this.setState({header: false})
-    }
   }
 
   handleSubmit = (e) => {
@@ -45,7 +43,7 @@ export class Header extends Component {
     }
     return (
       <div className='links'>
-        <Link to='/MustReadList' className='header-link'>Must Read List</Link>
+        <Link to='/MustReadList' onClick={this.toggleHeader} className='header-link'>Must Read List</Link>
         <header className={headerClass}>
           <div className="title-search">
             <h1>Booktivist</h1>
