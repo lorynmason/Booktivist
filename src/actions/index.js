@@ -18,3 +18,17 @@ export const addMessage = message => {
     message
   }
 }
+
+export const addToBookList = bookList => {
+  return {
+    type: 'ADD_BOOK',
+    bookList
+  }
+}
+
+export const removeFromBookList = bookList => {
+  return {
+    type: 'REMOVE_BOOK',
+    bookList
+  }
+}

@@ -1,29 +1,48 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-export const Card = ({ result, isFavorite }) => {
-  const handleClick = () => {
-    const oldbookList = JSON.parse(localStorage.getItem('bookList'))
-    if(!isFavorite) {
-      if(oldbookList) {
-        const updatedList = [...oldbookList, result]
-        localStorage.setItem('bookList', JSON.stringify(updatedList))
-      } else {
-        localStorage.setItem('bookList', JSON.stringify([result]))
-      }
-    } else {
-      const updatedList = oldbookList.filter(book => book.Name !== result.Name)
-      localStorage.setItem('bookList', JSON.stringify(updatedList))
+export class Card  extends Component{ 
+  constructor(){
+    super()
+    this.state = {
+      isFavorite: false
     }
   }
-  let star = 'far fa-star'
-  if (isFavorite) {
-    star = 'fas fa-star'
+
+  componentDidMount() {
+    this.props.bookList.forEach(book => {
+      if (book.Name === this.props.result.Name) {
+        this.toggleFavorite()
+      }
+    })
   }
-  return (
-    <div className="card" key={result.Name}>
-      <button><i className={star} onClick={handleClick}></i></button>
-      <h1>{result.Name}</h1>
-      <p>{result.wTeaser}</p>
+
+  toggleFavorite = () => {
+    const { isFavorite } = this.state
+    this.setState({isFavorite: !isFavorite})
+  }
+
+  handleClick = () => {
+    const { isFavorite } = this.state
+    if(!isFavorite) {
+      this.props.addBookList(this.props.result)
+     } else {
+      this.props.removeBookList(this.props.result)
+     }
+    this.toggleFavorite()
+  }
+
+  render() {
+    let star = 'far fa-star'
+    const { isFavorite } = this.state
+    if (isFavorite) {
+      star = 'fas fa-star'
+    }
+    return (
+    <div className="card" key={this.props.result.Name}>
+      <button><i className={star} onClick={this.handleClick}></i></button>
+      <h1>{this.props.result.Name}</h1>
+      <p>{this.props.result.wTeaser}</p>
     </div>
-  )
+    )
+  } 
 }
