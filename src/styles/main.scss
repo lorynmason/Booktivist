@@ -8,9 +8,10 @@ $mainFont: 'Anaheim', sans-serif;
 //colors
 // $backroundColor: rgba(160, 137, 107, 0.5);
 $backgroundColor: rgb(168, 163, 158);
-
+$accentColor: rgb(7, 104, 173);
 
 @import "Reset";
 @import "Header";
 @import "Card";
 @import "CardContainer";
+@import "Message";

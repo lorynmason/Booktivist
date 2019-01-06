@@ -15,11 +15,16 @@ export const CardContainer = ({ results, info, location, addBookList, removeBook
   })
 
   if (location.pathname === '/MustReadList') {
-    cards = bookList.map(result => {
-      return <Card result={result} addBookList={addBookList} removeBookList={removeBookList} bookList={bookList} />
-    })
+    if (bookList.length) {
+      cards = bookList.map(result => {
+        return <Card result={result} addBookList={addBookList} removeBookList={removeBookList} bookList={bookList} />
+      })
+    } else {
+      cards = <h3>There are no Books on Your Reading List</h3>
+    }
     return (
       <main>
+        <Message />
         <h2>Must Read List</h2>
         <div className="card-container">
           {cards}

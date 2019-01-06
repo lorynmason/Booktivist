@@ -5,14 +5,14 @@ import { addMessage } from '../../actions';
 export const Message = (props) => {
   console.log(props)
   setTimeout(() => {
-    // props.addMessage(null)
+    props.addMessage('')
   }, 5000);
 
   if(props.message) {
     return (
       <div className="message-container">
         <p>
-          {/* {props.message} */}
+          {props.message}
         </p>
       </div>
     )

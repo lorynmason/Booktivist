@@ -13,11 +13,14 @@
   background: rgba(7, 104, 173, 0.945);
   height: 450px;
 }
-.top-card {
-  @include card();
-  margin: 0 auto 40px;
-  width: 700px;
-  height: 300px;
+
+.top-card-container {
+  .card {
+    @include card();
+    margin: 0 auto 40px;
+    width: 700px;
+    height: 300px;
+  }
 }
 .card {
   @include card();
