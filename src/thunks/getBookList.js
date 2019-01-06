@@ -1,8 +1,8 @@
-// import { getBookList } from '../actions'
+import { retrieveBookList } from '../actions'
 
-export const getBookList = (book) => {
+export const getBookList = () => {
   return dispatch => {
     const bookList = JSON.parse(localStorage.getItem('bookList'))
-    // dispatch(getBookList(bookList))
+    dispatch(retrieveBookList(bookList))
   }
 }

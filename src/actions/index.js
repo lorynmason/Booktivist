@@ -32,3 +32,10 @@ export const removeFromBookList = bookList => {
     bookList
   }
 }
+
+export const retrieveBookList = bookList => {
+  return {
+    type: 'RETRIEVE_LIST',
+    bookList
+  }
+}
