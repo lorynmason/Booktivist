@@ -1,17 +1,19 @@
 .loader {
-  color: #000;
-  margin: 5px 0;
-  text-transform: uppercase;
+  color: #fff;
+  margin: 5px;
+  padding: 40px 0;
   text-align: center;
-  font-family: 'Arial', sans-serif;
+  font-family: $mainFont;
   font-size: 3rem;
   letter-spacing: 2px;
-  margin: 0 auto;
+  margin: 100px auto 100px;
+  background: rgba(0, 0, 0, 0.644);
+  width: 600px;
 }
 
 .loader .line {
   width: 50px;
-  background: #000;
+  background: $accentColor;
   font-size: 4rem;
   margin: 5px;
   display: inline-block;
@@ -30,14 +32,14 @@
 @keyframes opacity { 
   0% { 
     opacity: 1;
-    height: 40px;
+    height: 50px;
   }
   50% { 
     opacity: 0;
-    height: 35px;
+    height: 45px;
   }
   100% { 
     opacity: 1;
-    height: 40px;
+    height: 50px;
   }  
 }

@@ -6,6 +6,7 @@ import { addMessage } from '../../actions';
 import { addBookList } from '../../thunks/addBookList';
 import { removeBookList } from '../../thunks/removeBookList';
 import { fetchBooks } from '../../thunks/fetchBooks';
+import { Loader } from '../../components/Loader/Loader';
 
 export const CardContainer = ({ results, info, location, addBookList, removeBookList, bookList, sendSearch, isLoading}) => {
 
@@ -21,18 +22,7 @@ export const CardContainer = ({ results, info, location, addBookList, removeBook
   }
 
   if (location.pathname === '/SearchResults' && !results.length) {
-    infoCard = (<div class="loader">
-    <span class="line line-1"></span>
-    <span class="line line-2"></span>
-    <span class="line line-3"></span>
-    <span class="line line-4"></span>
-    <span class="line line-5"></span>
-    <span class="line line-6"></span>
-    <span class="line line-7"></span>
-    <span class="line line-8"></span>
-    <span class="line line-9"></span>
-    <div>Loading</div>
-  </div>)
+    return <Loader />
   }
 
   if (location.pathname === '/MustReadList') {
