@@ -4,11 +4,12 @@ import CardContainer from '../CardContainer/CardContainer'
 import '../../styles/main.scss'
 import { connect } from 'react-redux';
 import { Switch, Route, Redirect, withRouter } from 'react-router';
+import { getBookList } from '../../thunks/getBookList';
 
 class App extends Component {
-  // componentDidMount(){
-
-  // }
+  componentDidMount(){
+    this.props.getBookList()
+  }
 
   render() {
     return (
@@ -25,6 +26,7 @@ export const mapStateToProps = state => ({
 });
 
 export const mapDispatchToProps = dispatch => ({
+  getBookList: () => dispatch(getBookList())
 });
 
 export default withRouter(connect(
