@@ -20,6 +20,7 @@ export const CardContainer = ({ results, info, location, addBookList, removeBook
     })
     return (
       <main>
+         <Message />
         <h2>Must Read List</h2>
         <div className="card-container">
           {cards}
