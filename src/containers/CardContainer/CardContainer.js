@@ -6,7 +6,6 @@ import { addMessage } from '../../actions';
 import { addBookList } from '../../thunks/addBookList';
 import { removeBookList } from '../../thunks/removeBookList';
 import { fetchBooks } from '../../thunks/fetchBooks';
-import { Switch, Route, Redirect, withRouter } from 'react-router';
 
 export const CardContainer = ({ results, info, location, addBookList, removeBookList, bookList, sendSearch}) => {
 
@@ -19,7 +18,7 @@ export const CardContainer = ({ results, info, location, addBookList, removeBook
   let page;
 
   if (location.pathname === '/SearchResults' && !results.length) {
-    page = <Redirect to='/' />
+    infoCard = <h3> Sorry We didn't find anything</h3>
   }
 
   if (location.pathname === '/MustReadList') {
