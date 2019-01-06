@@ -31,15 +31,20 @@ export class Card extends Component{
     this.toggleFavorite()
   }
 
+  findSimilar = () => {
+    this.props.sendSearch(this.props.result.Name)
+  }
+
   render() {
-    let star = 'far fa-star'
+    let bookmark = "far fa-bookmark"
     const { isFavorite } = this.state
     if (isFavorite) {
-      star = 'fas fa-star'
+      bookmark = "fas fa-bookmark"
     }
     return (
     <div className="card" key={this.props.result.Name}>
-      <button><i className={star} onClick={this.handleClick}></i></button>
+      <button><i className={bookmark} onClick={this.handleClick}></i></button>
+      <button><i className="fal fa-book" onClick={this.findSimilar}></i></button>
       <h1>{this.props.result.Name}</h1>
       <p>{this.props.result.wTeaser}</p>
     </div>

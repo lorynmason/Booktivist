@@ -5,19 +5,20 @@ import Message from '../Message/Message';
 import { addMessage } from '../../actions';
 import { addBookList } from '../../thunks/addBookList';
 import { removeBookList } from '../../thunks/removeBookList';
+import { fetchBooks } from '../../thunks/fetchBooks';
 
-export const CardContainer = ({ results, info, location, addBookList, removeBookList, bookList}) => {
+export const CardContainer = ({ results, info, location, addBookList, removeBookList, bookList, sendSearch}) => {
 
-  let infoCard = <Card result={info} addBookList={addBookList} removeBookList={removeBookList} bookList={bookList} />
+  let infoCard = <Card result={info} addBookList={addBookList} removeBookList={removeBookList} bookList={bookList} sendSearch={sendSearch}/>
 
   let cards = results.map(result => {
-    return <Card result={result} addBookList={addBookList} removeBookList={removeBookList} bookList={bookList} />
+    return <Card result={result} addBookList={addBookList} removeBookList={removeBookList} bookList={bookList} sendSearch={sendSearch}/>
   })
 
   if (location.pathname === '/MustReadList') {
     if (bookList.length) {
       cards = bookList.map(result => {
-        return <Card result={result} addBookList={addBookList} removeBookList={removeBookList} bookList={bookList} />
+        return <Card result={result} addBookList={addBookList} removeBookList={removeBookList} bookList={bookList} sendSearch={sendSearch}/>
       })
     } else {
       cards = <h3>There are no Books on Your Reading List</h3>
@@ -56,7 +57,8 @@ export const mapStateToProps = state => ({
 export const mapDispatchToProps = dispatch => ({
   addMessage: message => dispatch(addMessage(message)),
   addBookList: book => dispatch(addBookList(book)),
-  removeBookList: book => dispatch(removeBookList(book))
+  removeBookList: book => dispatch(removeBookList(book)),
+  sendSearch: search => dispatch(fetchBooks(search))
 });
 
 export default connect(
