@@ -7,10 +7,6 @@ import { Switch, Route, Redirect, withRouter } from 'react-router';
 
 class App extends Component {
 
-  componentDidMount() {
-    //check local storage
-  }
-
   render() {
     return (
       <div className="App">
