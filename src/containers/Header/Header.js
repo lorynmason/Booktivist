@@ -51,7 +51,7 @@ export class Header extends Component {
             <h1>Booktivist</h1>
             <h3>Read up, so You can Speak up</h3>
             <form onSubmit={this.handleSubmit}>
-              <input placeholder="Search for Authors or Books" name="search" value={this.search} onChange={this.handleChange}></input>
+              <input placeholder="Search for Authors or Books" name="search" value={this.state.search} onChange={this.handleChange}></input>
               <button onClick={this.handleSubmit}><Link to="/SearchResults">Search</Link></button>
             </form>
           </div>
