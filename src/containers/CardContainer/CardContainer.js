@@ -7,8 +7,9 @@ import { addBookList } from '../../thunks/addBookList';
 import { removeBookList } from '../../thunks/removeBookList';
 import { fetchBooks } from '../../thunks/fetchBooks';
 import { Loader } from '../../components/Loader/Loader';
+import { Redirect } from 'react-router';
 
-export const CardContainer = ({ results, info, location, addBookList, removeBookList, bookList, sendSearch, isLoading}) => {
+export const CardContainer = ({ results, info, location, addBookList, removeBookList, bookList, sendSearch, isLoading, message}) => {
 
   let infoCard = <Card result={info} addBookList={addBookList} removeBookList={removeBookList} bookList={bookList} sendSearch={sendSearch}/>
 
@@ -18,11 +19,11 @@ export const CardContainer = ({ results, info, location, addBookList, removeBook
 
   let page;
   if (isLoading) {
-    infoCard = <h3>Loading...</h3>
+    return <Loader />
   }
 
-  if (location.pathname === '/SearchResults' && !results.length) {
-    return <Loader />
+  if (location.pathname === '/SearchResults' && !isLoading && !results.length && message !== 'Looking Similar Books...') {
+    return <h3>Sorry didn't find anything</h3>
   }
 
   if (location.pathname === '/MustReadList') {
