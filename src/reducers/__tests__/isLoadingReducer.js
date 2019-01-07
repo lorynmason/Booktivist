@@ -10,11 +10,10 @@ describe('isLoading', () => {
 
   it('should return a state of a bool', () => {
     const mockAction = {
-      type: 'ADD_INFO',
-      info: false
+      type: 'IS_LOADING',
+      isLoading: true
     };
-    const expected = false
-
+    const expected = true
     const result = isLoadingReducer(false, mockAction);
     expect(result).toEqual(expected);
   })
