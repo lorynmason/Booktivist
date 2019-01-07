@@ -1,17 +1,33 @@
 @mixin card() {
+  color: rgb(240, 234, 234);
+  overflow-y: scroll;
+  font-family: $mainFont;
+  background: rgba(11, 84, 136, 0.964);
+  height: 450px;
+  text-align: center;
+  box-shadow: 4px 4px 7px rgba(32, 32, 32, 0.835);
   h1{
     font-size: 2rem;
-    padding: 5px;
-    text-align: center;
+    font-weight: bold;
+    padding: 50px 5px 0px;
   }
   p{
     font-size: 1.3rem;
-    padding: 5px;
+    padding: 15px;
   }
-  overflow-y: scroll;
-  font-family: $mainFont;
-  background: rgba(7, 104, 173, 0.945);
-  height: 450px;
+  button {
+    color: rgb(240, 234, 234);
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 2rem;
+    padding: 10px;
+    float: left;
+  }
+  .search-btn {
+    float: right;
+    font-size: 1.8rem;
+  }
 }
 
 .top-card-container {

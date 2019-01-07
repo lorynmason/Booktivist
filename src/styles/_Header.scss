@@ -3,6 +3,7 @@
   background: $backgroundColor;
   height: $height;
   width: 100%;
+  box-shadow: 4px 4px 7px rgba(32, 32, 32, 0.835);
   .header-link {
     font-family: $titleFont;
     text-decoration: none;
