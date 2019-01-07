@@ -10,6 +10,10 @@ export class Card extends Component {
   }
 
   componentDidMount() {
+    this.checkBookList()
+  }
+
+  checkBookList = () => {
     this.props.getBookList()
     this.props.bookList.forEach(book => {
       if (book.Name === this.props.result.Name) {
@@ -34,8 +38,8 @@ export class Card extends Component {
   }
 
   findSimilar = () => {
-    this.props.getBookList()
     this.props.sendSearch(this.props.result.Name)
+    this.checkBookList()
   }
 
   render() {
