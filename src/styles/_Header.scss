@@ -1,59 +1,8 @@
-// $accentColor: #04BAF4;
-$accentColor: rgb(7, 104, 173);
 
-
-@mixin headers($height, $imgHeight) {
-  img {
-    height: $imgHeight;
-  }
-  display: flex;
-  justify-content: center;
-  align-items: center;
+@mixin headers($height, $imgHeight, $paddingTop) {
   background: $backgroundColor;
-  width: 100%;
   height: $height;
-  font-family: $titleFont;
-  color: rgb(0, 0, 0);
-  div { 
-    text-align: center;
-    margin: 10px 40px;
-    h1{
-      font-size: 10rem;
-      text-shadow: 6px 3px $accentColor;
-    }
-    h3 {
-      font-size: 4rem;
-    }
-    input {
-      margin-top: 25px;
-      width: 220px;
-      height: 30px;
-      outline: none;
-      font-family: $titleFont;
-      font-size: 1.6rem;
-      &::placeholder {
-        font-family: $titleFont;
-        font-size: 1.6rem;
-      }
-    }
-    button{
-      height: 34px;
-      width: 90px;
-      border: none;
-      font-size: 1.6rem;
-      font-family: $titleFont;
-      background: $accentColor;
-      outline: none;
-      a {
-        text-decoration: none;
-        color: black;
-      }
-    }
-  }
-}
-
-.links {
-  background: $backgroundColor;
+  width: 100%;
   .header-link {
     font-family: $titleFont;
     text-decoration: none;
@@ -61,14 +10,63 @@ $accentColor: rgb(7, 104, 173);
     color: black;
     float: right;
     margin: 15px;
+    height: 5vh;
+  }
+  header {
+    img {
+      height: $imgHeight;
+    }
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: $titleFont;
+    color: rgb(0, 0, 0);
+    padding-top: $paddingTop;
+    div { 
+      text-align: center;
+      margin: 10px 60px 10px 80px;
+      h1{
+        font-size: 10rem;
+        text-shadow: 6px 3px $accentColor;
+      }
+      h3 {
+        font-size: 4rem;
+      }
+      input {
+        margin-top: 25px;
+        width: 220px;
+        height: 30px;
+        outline: none;
+        font-family: $titleFont;
+        font-size: 1.6rem;
+        &::placeholder {
+          font-family: $titleFont;
+          font-size: 1.6rem;
+        }
+      }
+      button{
+        height: 34px;
+        width: 90px;
+        border: none;
+        font-size: 1.6rem;
+        font-family: $titleFont;
+        background: $accentColor;
+        outline: none;
+        a {
+          text-decoration: none;
+          color: black;
+        }
+      }
+    }
   }
 }
+
 .header-false {
-  @include headers(100vh, 700px);
+  @include headers(100vh, 770px, 10px);
 }
 
 .header-true {
-  @include headers(40vh, 300px);
+  @include headers(40vh, 300px, 5px);
   img {
     animation: shrink 1.5s linear;
   }

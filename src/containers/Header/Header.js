@@ -43,9 +43,9 @@ export class Header extends Component {
       headerClass = 'header-true'
     }
     return (
-      <div className='links'>
+      <div className={headerClass}>
         <Link to='/MustReadList' onClick={this.toggleHeader} className='header-link'>Must Read List</Link>
-        <header className={headerClass}>
+        <header>
           <div className="title-search">
             <h1>Booktivist</h1>
             <h3>Read up, so You can Speak up</h3>
@@ -55,7 +55,6 @@ export class Header extends Component {
             </form>
           </div>
           <img src='https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Fist.svg/2000px-Fist.svg.png' alt='activist fist'/>
-          {/* <img src='../../styles/images/2000px-Fist.svg.png'/> */}
         </header>
       </div>
     )
