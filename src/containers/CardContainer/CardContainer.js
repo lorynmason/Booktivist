@@ -10,11 +10,25 @@ import { Loader } from '../../components/Loader/Loader';
 import { getBookList } from '../../thunks/getBookList';
 
 export const CardContainer = ({ results, info, location, addBookList, removeBookList, bookList, sendSearch, isLoading, message, getBookList, addMessage}) => {
-
-  let infoCard = <Card result={info} addBookList={addBookList} removeBookList={removeBookList} bookList={bookList} sendSearch={sendSearch} getBookList={getBookList} addMessage={addMessage}/>
-
+  
+  let infoCard;
+  let isFavorite = false
+  bookList.forEach(item => {
+    if (item.Name === info.Name) {
+      isFavorite = true      
+    }
+    infoCard = <Card result={info} addBookList={addBookList} removeBookList={removeBookList} bookList={bookList} sendSearch={sendSearch} getBookList={getBookList} addMessage={addMessage} isFavorite={isFavorite}/>
+  })
+  
+  
   let cards = results.map(result => {
-    return <Card result={result} addBookList={addBookList} removeBookList={removeBookList} bookList={bookList} sendSearch={sendSearch} getBookList={getBookList} addMessage={addMessage}/>
+    let isFavorite = false
+      bookList.forEach(item => {
+        if (item.Name === result.Name) {
+          isFavorite = true      
+        }
+      })
+    return <Card result={result} addBookList={addBookList} removeBookList={removeBookList} bookList={bookList} sendSearch={sendSearch} getBookList={getBookList} addMessage={addMessage} isFavorite={isFavorite}/>
   })
 
   if (isLoading) {
@@ -25,12 +39,13 @@ export const CardContainer = ({ results, info, location, addBookList, removeBook
     return <h2>Sorry didn't find anything</h2>
   }
 
-  const loc = location.pathname
+  const loc = location.pathname;
+
 
   if (location.pathname === '/MustReadList') {
     if (bookList.length) {
       cards = bookList.map(result => {
-        return <Card result={result} addBookList={addBookList} removeBookList={removeBookList} bookList={bookList} sendSearch={sendSearch} getBookList={getBookList} message={message} addMessage={addMessage} loc={loc} />
+        return <Card result={result} addBookList={addBookList} removeBookList={removeBookList} bookList={bookList} sendSearch={sendSearch} getBookList={getBookList} message={message} addMessage={addMessage} loc={loc} isFavorite={true}/>
       })
     } else {
       cards = <h3>There are no Books on Your Reading List</h3>
