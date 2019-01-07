@@ -7,28 +7,30 @@ import { addBookList } from '../../thunks/addBookList';
 import { removeBookList } from '../../thunks/removeBookList';
 import { fetchBooks } from '../../thunks/fetchBooks';
 import { Loader } from '../../components/Loader/Loader';
+import { getBookList } from '../../thunks/getBookList';
 
-export const CardContainer = ({ results, info, location, addBookList, removeBookList, bookList, sendSearch, isLoading, message}) => {
+export const CardContainer = ({ results, info, location, addBookList, removeBookList, bookList, sendSearch, isLoading, message, getBookList, addMessage}) => {
 
-  let infoCard = <Card result={info} addBookList={addBookList} removeBookList={removeBookList} bookList={bookList} sendSearch={sendSearch}/>
+  let infoCard = <Card result={info} addBookList={addBookList} removeBookList={removeBookList} bookList={bookList} sendSearch={sendSearch} getBookList={getBookList} addMessage={addMessage}/>
 
   let cards = results.map(result => {
-    return <Card result={result} addBookList={addBookList} removeBookList={removeBookList} bookList={bookList} sendSearch={sendSearch}/>
+    return <Card result={result} addBookList={addBookList} removeBookList={removeBookList} bookList={bookList} sendSearch={sendSearch} getBookList={getBookList} addMessage={addMessage}/>
   })
 
-  let page;
   if (isLoading) {
     return <Loader />
   }
 
   if (location.pathname === '/SearchResults' && !isLoading && !results.length && message !== 'Looking Similar Books...') {
-    return <h3>Sorry didn't find anything</h3>
+    return <h2>Sorry didn't find anything</h2>
   }
+
+  const loc = location.pathname
 
   if (location.pathname === '/MustReadList') {
     if (bookList.length) {
       cards = bookList.map(result => {
-        return <Card result={result} addBookList={addBookList} removeBookList={removeBookList} bookList={bookList} sendSearch={sendSearch}/>
+        return <Card result={result} addBookList={addBookList} removeBookList={removeBookList} bookList={bookList} sendSearch={sendSearch} getBookList={getBookList} message={message} addMessage={addMessage} loc={loc} />
       })
     } else {
       cards = <h3>There are no Books on Your Reading List</h3>
@@ -46,11 +48,10 @@ export const CardContainer = ({ results, info, location, addBookList, removeBook
   return (
     <main>
       <Message />
-      {page}
       <div className="top-card-container">
         {infoCard}
       </div>
-      <h2>Recomendations</h2>
+      <h2>Recommendations</h2>
       <div className="card-container">
         {cards}
       </div>
@@ -70,7 +71,8 @@ export const mapDispatchToProps = dispatch => ({
   addMessage: message => dispatch(addMessage(message)),
   addBookList: book => dispatch(addBookList(book)),
   removeBookList: book => dispatch(removeBookList(book)),
-  sendSearch: search => dispatch(fetchBooks(search))
+  sendSearch: search => dispatch(fetchBooks(search)),
+  getBookList: () => dispatch(getBookList())
 });
 
 export default connect(

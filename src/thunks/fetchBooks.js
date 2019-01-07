@@ -17,6 +17,9 @@ export const fetchBooks = (search) => {
         dispatch(addMessage('Found Similar Books!'))
         dispatch(addSearchResults(results.Similar.Results))
         dispatch(addSearchInfo(results.Similar.Info))
+      } else {
+        dispatch(addSearchResults())
+        dispatch(addSearchInfo())
       }
     } catch (err) {
       dispatch(addMessage(err.message))

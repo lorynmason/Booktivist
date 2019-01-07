@@ -2,7 +2,7 @@ h2 {
   font-size: 5rem;
   font-family: $titleFont;
   text-align: center;
-  text-shadow: 4px 3px rgb(240, 234, 234);
+  // text-shadow: 4px 3px rgb(240, 234, 234);
   margin: -15px 0 15px;
 }
 
@@ -24,8 +24,9 @@ main {
   padding: 20px 5px 80px;
 }
 
-html {
-  background: url(http://creativeresistance.org/wp-content/uploads/2014/02/bansky-tv-heads.jpg);
+body {
+  background: url(https://static1.squarespace.com/static/53cb0ed6e4b01d2bd00e3633/t/587adf15e58c62d26c18db70/1484447548343/book+pages+background.jpeg);
   background-attachment: fixed;
-  background-position: 85% 60%;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
