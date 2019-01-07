@@ -44,7 +44,7 @@ export class Card extends Component{
     return (
     <div className="card" key={this.props.result.Name}>
       <button><i className={bookmark} onClick={this.handleClick}></i></button>
-      <button><i className="fas fa-search" onClick={this.findSimilar}></i></button>
+      <button className="search-btn"><i className="fas fa-search" onClick={this.findSimilar}></i></button>
       <h1>{this.props.result.Name}</h1>
       <p>{this.props.result.wTeaser}</p>
     </div>

@@ -7,7 +7,6 @@ import { addBookList } from '../../thunks/addBookList';
 import { removeBookList } from '../../thunks/removeBookList';
 import { fetchBooks } from '../../thunks/fetchBooks';
 import { Loader } from '../../components/Loader/Loader';
-import { Redirect } from 'react-router';
 
 export const CardContainer = ({ results, info, location, addBookList, removeBookList, bookList, sendSearch, isLoading, message}) => {
 
