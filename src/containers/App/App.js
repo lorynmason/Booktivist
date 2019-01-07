@@ -3,7 +3,7 @@ import Header from '../../containers/Header/Header'
 import CardContainer from '../CardContainer/CardContainer'
 import '../../styles/main.scss'
 import { connect } from 'react-redux';
-import { Switch, Route, Redirect, withRouter } from 'react-router';
+import { Route, Redirect, withRouter } from 'react-router';
 import { getBookList } from '../../thunks/getBookList';
 
 class App extends Component {

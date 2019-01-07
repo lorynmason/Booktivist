@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { fetchBooks } from '../../thunks/fetchBooks';
 import { Link } from 'react-router-dom';
-import { Switch, Route, Redirect, withRouter } from 'react-router';
+import { withRouter } from 'react-router';
 
 
 export class Header extends Component {
