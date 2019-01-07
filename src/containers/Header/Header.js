@@ -10,14 +10,14 @@ export class Header extends Component {
     super()
     this.state = {
       search: '',
-      header: true
+      header: false
     }
   }
 
   componentDidMount(){
     const { pathname } = this.props.location
-    if(pathname === '/' ) {
-    this.setState({header: false})      
+    if(pathname !== '/' ) {
+    this.setState({header: true})      
     } 
   }
 

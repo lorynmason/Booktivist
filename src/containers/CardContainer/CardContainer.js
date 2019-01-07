@@ -6,8 +6,10 @@ import { addMessage } from '../../actions';
 import { addBookList } from '../../thunks/addBookList';
 import { removeBookList } from '../../thunks/removeBookList';
 import { fetchBooks } from '../../thunks/fetchBooks';
+import { Loader } from '../../components/Loader/Loader';
+import { Redirect } from 'react-router';
 
-export const CardContainer = ({ results, info, location, addBookList, removeBookList, bookList, sendSearch}) => {
+export const CardContainer = ({ results, info, location, addBookList, removeBookList, bookList, sendSearch, isLoading, message}) => {
 
   let infoCard = <Card result={info} addBookList={addBookList} removeBookList={removeBookList} bookList={bookList} sendSearch={sendSearch}/>
 
@@ -16,9 +18,12 @@ export const CardContainer = ({ results, info, location, addBookList, removeBook
   })
 
   let page;
+  if (isLoading) {
+    return <Loader />
+  }
 
-  if (location.pathname === '/SearchResults' && !results.length) {
-    infoCard = <h3> Sorry We didn't find anything</h3>
+  if (location.pathname === '/SearchResults' && !isLoading && !results.length && message !== 'Looking Similar Books...') {
+    return <h3>Sorry didn't find anything</h3>
   }
 
   if (location.pathname === '/MustReadList') {
@@ -58,7 +63,8 @@ export const mapStateToProps = state => ({
   results: state.results,
   info: state.info,
   message: state.message,
-  bookList: state.bookList
+  bookList: state.bookList,
+  isLoading: state.isLoading
 });
 
 export const mapDispatchToProps = dispatch => ({
