@@ -4,7 +4,7 @@ import CardContainer from '../CardContainer/CardContainer'
 import '../../styles/main.scss'
 import { connect } from 'react-redux';
 import { Route, Redirect, withRouter } from 'react-router';
-import { getBookList } from '../../thunks/getBookList';
+import { getBookList } from '../../helpers/getBookList';
 
 class App extends Component {
   componentDidMount(){

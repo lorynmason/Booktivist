@@ -3,11 +3,11 @@ import { connect } from 'react-redux';
 import { Card } from '../../components/Card/Card'
 import Message from '../Message/Message';
 import { addMessage } from '../../actions';
-import { addBookList } from '../../thunks/addBookList';
-import { removeBookList } from '../../thunks/removeBookList';
+import { addBookList } from '../../helpers/addBookList';
+import { removeBookList } from '../../helpers/removeBookList';
 import { fetchBooks } from '../../thunks/fetchBooks';
 import { Loader } from '../../components/Loader/Loader';
-import { getBookList } from '../../thunks/getBookList';
+import { getBookList } from '../../helpers/getBookList';
 
 export const CardContainer = ({ results, info, location, addBookList, removeBookList, bookList, sendSearch, isLoading, message, getBookList, addMessage}) => {
   
@@ -40,7 +40,6 @@ export const CardContainer = ({ results, info, location, addBookList, removeBook
   }
 
   const loc = location.pathname;
-
 
   if (location.pathname === '/MustReadList') {
     if (bookList.length) {
