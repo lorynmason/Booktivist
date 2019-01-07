@@ -1,5 +1,17 @@
 
-@mixin headers($imgHeight) {
+@mixin headers($height, $imgHeight, $paddingTop) {
+  background: $backgroundColor;
+  height: $height;
+  width: 100%;
+  .header-link {
+    font-family: $titleFont;
+    text-decoration: none;
+    font-size: 2rem;
+    color: black;
+    float: right;
+    margin: 15px;
+    height: 5vh;
+  }
   header {
     img {
       height: $imgHeight;
@@ -9,9 +21,10 @@
     align-items: center;
     font-family: $titleFont;
     color: rgb(0, 0, 0);
+    padding-top: $paddingTop;
     div { 
       text-align: center;
-      margin: 10px 40px;
+      margin: 10px 60px 10px 80px;
       h1{
         font-size: 10rem;
         text-shadow: 6px 3px $accentColor;
@@ -49,44 +62,16 @@
 }
 
 .header-false {
-  background: $backgroundColor;
-  height: 100vh;
-  width: 100%;
-  .header-link {
-    font-family: $titleFont;
-    text-decoration: none;
-    font-size: 2rem;
-    color: black;
-    float: right;
-    margin: 15px;
-    height: 5vh;
-  }
-  @include headers(770px);
-  header {
-    padding-top: 10px;
-  }
+  @include headers(100vh, 770px, 10px);
 }
 
 .header-true {
-  background: $backgroundColor;
-  height: 40vh;
-  width: 100%;
-  .header-link {
-    font-family: $titleFont;
-    text-decoration: none;
-    font-size: 2rem;
-    color: black;
-    float: right;
-    margin: 15px;
-    height: 5vh;
-  }
-  @include headers(300px);
+  @include headers(40vh, 300px, 5px);
   img {
     animation: shrink 1.5s linear;
   }
   animation: shrink 1.5s linear;
 }
-
 
 @keyframes shrink {
   0%{
