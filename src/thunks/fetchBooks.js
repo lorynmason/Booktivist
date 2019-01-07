@@ -1,7 +1,6 @@
 import { key } from '../apikey';
 import { addSearchResults, addSearchInfo, addMessage, isLoading } from '../actions'
 
-
 export const fetchBooks = (search) => {
   return async (dispatch) => {
     try {
@@ -16,7 +15,11 @@ export const fetchBooks = (search) => {
       if (results.Similar.Results.length) {
         dispatch(addMessage('Found Similar Books!'))
         dispatch(addSearchResults(results.Similar.Results))
-        dispatch(addSearchInfo(results.Similar.Info))
+        const info = results.Similar.Info.reduce((obj, item) => {
+          obj= item
+          return obj
+        }, {})
+        dispatch(addSearchInfo(info))
       } else {
         dispatch(addSearchResults())
         dispatch(addSearchInfo())
