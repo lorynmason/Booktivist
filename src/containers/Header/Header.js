@@ -17,7 +17,7 @@ export class Header extends Component {
   componentDidMount(){
     const { pathname } = this.props.location
     if(pathname !== '/' ) {
-    this.setState({header: true})      
+    this.setState({header: true})
     } 
   }
 
@@ -60,10 +60,6 @@ export class Header extends Component {
     )
   }
 }
-
-// export const mapStateToProps = state => ({
-
-// });
 
 export const mapDispatchToProps = dispatch => ({
   sendSearch: search => dispatch(fetchBooks(search))
