@@ -60,5 +60,6 @@ describe('fetchBooks', () => {
     await thunk(mockDispatch);
     
     expect(mockDispatch).toHaveBeenCalledWith(addSearchResults(mockResults));
+    expect(mockDispatch).toHaveBeenCalledWith(isLoading(false));
   });
 })

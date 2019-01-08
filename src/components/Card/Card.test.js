@@ -1,6 +1,6 @@
 import Card from './Card'
 import { shallow } from 'enzyme'
-import React, { Component } from 'react';
+import React from 'react';
 
 describe('Card', () => {
   let mockFunc;
@@ -49,19 +49,6 @@ describe('Card', () => {
 
   it('should initially render addBookList button as an empty bookmard', () => {
     const result = wrapper.find('#bookmark').hasClass('far fa-bookmark');
-    expect(result).toEqual(true);
-  });
-
-  it.skip('should render addBookList button as a full bookmark on click', () => {
-    wrapper = shallow(<Card 
-      isFavoite={true}
-      addBookList={mockFunc}
-      removeBookList={mockFunc}
-      result={mockBook}
-      sendSearch={mockFunc}
-      loc=''/>)
-    wrapper.find('#bookmark').simulate('click')
-    const result = wrapper.find('#bookmark').simulate('click').hasClass("fas fa-bookmark");
     expect(result).toEqual(true);
   });
 })
