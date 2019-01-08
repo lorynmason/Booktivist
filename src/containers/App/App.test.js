@@ -3,6 +3,8 @@ import { App, mapDispatchToProps} from './App';
 import { shallow } from 'enzyme'
 import { getBookList } from '../../helpers/getBookList'
 
+jest.mock('../../helpers/getBookList');
+
 describe('App', () => {
   let wrapper;
   const mockFunc = jest.fn()
@@ -17,14 +19,12 @@ describe('App', () => {
     expect(mockFunc).toHaveBeenCalled()
   })
 
-  it.skip('mapDispatchToProps should dispatch getBookList helper when getBookList is called from props', () => {
-    jest.mock('../../helpers/getBookList');
+  it('mapDispatchToProps should dispatch getBookList helper when getBookList is called from props', () => {
     const mockDispatch = jest.fn();
     getBookList.mockImplementation(() => {})
-
+    const expected = getBookList();
     const mappedProps = mapDispatchToProps(mockDispatch);
     mappedProps.getBookList();
-
-    expect(mockDispatch).toHaveBeenCalled();
+    expect(mockDispatch).toHaveBeenCalledWith(expected)
   })
 })
