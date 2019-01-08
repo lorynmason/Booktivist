@@ -3,7 +3,7 @@ import { getBookList } from '../getBookList';
 import LocalStorageMock from '../__mocks__/localSorageMocks'
 
 
-describe('checkLocalStorage', () => {
+describe('getBookList', () => {
   const getBooks = getBookList()
   const mockDispatch = jest.fn()
   it('should get bookList from local storage and dispatch retriveBookList', () => {
@@ -17,7 +17,6 @@ describe('checkLocalStorage', () => {
      const bookList = JSON.parse(localStorage.getItem('bookList'))
 
     getBooks(mockDispatch)
-    
     expect(mockDispatch).toHaveBeenCalledWith(retrieveBookList(bookList))
   });
 });
