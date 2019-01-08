@@ -25,8 +25,9 @@ export class Card extends Component {
     if (isFavorite) {
       bookmark = "fas fa-bookmark"
     }
+    console.log(this.props.result)
     return (
-    <div className="card" key={this.props.result.Name}>
+    <div className="card" key={this.props.result.wUrl}>
       {page}
       <button><i className={bookmark} onClick={this.handleClick}></i></button>
       <button className="search-btn"><i className="fas fa-search" onClick={this.findSimilar}></i></button>
