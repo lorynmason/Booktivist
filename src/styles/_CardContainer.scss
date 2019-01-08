@@ -1,13 +1,16 @@
-h2 {
-  font-size: 5rem;
+@mixin h2() {
+  font-size: 7rem;
   font-family: $titleFont;
   text-align: center;
-  // text-shadow: 4px 3px rgb(240, 234, 234);
-  margin: -15px 0 15px;
 }
 
 .top-card-container {
   margin: 0 auto;
+}
+
+.sorry {
+  @include h2();
+  margin: 100px 0;
 }
 
 .card-container {
@@ -18,10 +21,18 @@ h2 {
   grid-gap: 60px 0;
   justify-content: space-around;
   margin: 0 auto;
+  h2 {
+   @include h2();
+    margin: -15px 0 15px;
+  }
 }
 
 main {
   padding: 20px 5px 80px;
+  h2 {
+    @include h2();
+    margin: 50px 0;
+  }
 }
 
 body {

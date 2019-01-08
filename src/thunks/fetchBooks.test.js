@@ -6,12 +6,13 @@ describe('fetchBooks', () => {
   const url = "https://cors-anywhere.herokuapp.com/https://tastedive.com/api/similar?k=327213-BinaryCh-074WIUMV&q=Into the Wild&type=books&verbose=1&wTeaser=item description"
   let mockDispatch;
 
-  beforeEach(() => {
+  beforeEach(async() => {
+    window.fetch = jest.fn();
     mockDispatch = jest.fn();
+    fetchBooks.response = await fetch('url')
   });
   
   it('should call fetch with the correct parameters', () => {
-    window.fetch = jest.fn();
     const thunk = fetchBooks('Into the Wild');
     const expected = "https://cors-anywhere.herokuapp.com/https://tastedive.com/api/similar?k=327213-BinaryCh-074WIUMV&q=Into the Wild&type=books&verbose=1&wTeaser=item description"
     thunk(mockDispatch);

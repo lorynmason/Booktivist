@@ -36,14 +36,19 @@ ShallowWrapper {
           component={[Function]}
           path="/"
         />,
-        <Route
-          component={[Function]}
-          path="/SearchResults"
-        />,
-        <Route
-          component={[Function]}
-          path="/MustReadList"
-        />,
+        <Switch>
+          <Route
+            component={[Function]}
+            path="/SearchResults"
+          />
+          <Route
+            component={[Function]}
+            path="/MustReadList"
+          />
+          <Route
+            component={[Function]}
+          />
+        </Switch>,
       ],
       "className": "App",
     },
@@ -66,23 +71,58 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "class",
         "props": Object {
-          "component": [Function],
-          "path": "/SearchResults",
+          "children": Array [
+            <Route
+              component={[Function]}
+              path="/SearchResults"
+            />,
+            <Route
+              component={[Function]}
+              path="/MustReadList"
+            />,
+            <Route
+              component={[Function]}
+            />,
+          ],
         },
         "ref": null,
-        "rendered": null,
-        "type": [Function],
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "class",
-        "props": Object {
-          "component": [Function],
-          "path": "/MustReadList",
-        },
-        "ref": null,
-        "rendered": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "component": [Function],
+              "path": "/SearchResults",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "component": [Function],
+              "path": "/MustReadList",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "component": [Function],
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+        ],
         "type": [Function],
       },
     ],
@@ -99,14 +139,19 @@ ShallowWrapper {
             component={[Function]}
             path="/"
           />,
-          <Route
-            component={[Function]}
-            path="/SearchResults"
-          />,
-          <Route
-            component={[Function]}
-            path="/MustReadList"
-          />,
+          <Switch>
+            <Route
+              component={[Function]}
+              path="/SearchResults"
+            />
+            <Route
+              component={[Function]}
+              path="/MustReadList"
+            />
+            <Route
+              component={[Function]}
+            />
+          </Switch>,
         ],
         "className": "App",
       },
@@ -129,23 +174,58 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "class",
           "props": Object {
-            "component": [Function],
-            "path": "/SearchResults",
+            "children": Array [
+              <Route
+                component={[Function]}
+                path="/SearchResults"
+              />,
+              <Route
+                component={[Function]}
+                path="/MustReadList"
+              />,
+              <Route
+                component={[Function]}
+              />,
+            ],
           },
           "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "class",
-          "props": Object {
-            "component": [Function],
-            "path": "/MustReadList",
-          },
-          "ref": null,
-          "rendered": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "component": [Function],
+                "path": "/SearchResults",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "component": [Function],
+                "path": "/MustReadList",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "component": [Function],
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+          ],
           "type": [Function],
         },
       ],
