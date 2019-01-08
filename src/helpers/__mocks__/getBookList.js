@@ -1,0 +1,1 @@
+export const getBookList = jest.fn();

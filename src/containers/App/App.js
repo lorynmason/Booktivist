@@ -6,7 +6,7 @@ import { connect } from 'react-redux';
 import { Route, Redirect, withRouter } from 'react-router';
 import { getBookList } from '../../helpers/getBookList';
 
-class App extends Component {
+export class App extends Component {
   componentDidMount(){
     this.props.getBookList()
   }
@@ -22,14 +22,11 @@ class App extends Component {
   }
 }
 
-export const mapStateToProps = state => ({
-});
-
 export const mapDispatchToProps = dispatch => ({
   getBookList: () => dispatch(getBookList())
 });
 
 export default withRouter(connect(
-  mapStateToProps,
+  null,
   mapDispatchToProps
 )(App));
