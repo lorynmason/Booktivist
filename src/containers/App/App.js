@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import Header from '../../containers/Header/Header'
 import CardContainer from '../CardContainer/CardContainer'
+import { Page404 } from '../../components/Page404/Page404'
 import '../../styles/main.scss'
 import { connect } from 'react-redux';
-import { Route, Redirect, withRouter } from 'react-router';
+import { Route, withRouter, Switch } from 'react-router';
 import { getBookList } from '../../helpers/getBookList';
 
 export class App extends Component {
@@ -15,8 +16,11 @@ export class App extends Component {
     return (
       <div className="App">
         <Route path="/" component={Header} />
-        <Route path="/SearchResults" component={CardContainer} />
-        <Route path="/MustReadList" component={CardContainer} />
+        <Switch>
+          <Route path="/SearchResults" component={CardContainer} />
+          <Route path="/MustReadList" component={CardContainer} />
+          <Route component={Page404}/>
+        </Switch>
       </div>
     );
   }

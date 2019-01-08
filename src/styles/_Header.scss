@@ -47,15 +47,19 @@
       }
       button{
         height: 34px;
-        width: 90px;
+        width: 88px;
         border: none;
         font-size: 1.6rem;
         font-family: $titleFont;
         background: $accentColor;
         outline: none;
+        &:hover {
+          filter: brightness(150%)
+        }
         a {
           text-decoration: none;
           color: black;
+          padding: 10px 17px;
         }
       }
     }
