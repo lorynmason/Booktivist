@@ -21,8 +21,8 @@ export const fetchBooks = (search) => {
         }, {})
         dispatch(addSearchInfo(info))
       } else {
-        dispatch(addSearchResults())
-        dispatch(addSearchInfo())
+        dispatch(addSearchResults([]))
+        dispatch(addSearchInfo({}))
       }
     } catch (err) {
       dispatch(addMessage(err.message))
