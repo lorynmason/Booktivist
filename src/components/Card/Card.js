@@ -46,8 +46,5 @@ Card.propTypes = {
   removeBookList: PropTypes.func.isRequired,
   addBookList: PropTypes.func.isRequired, 
   sendSearch: PropTypes.func.isRequired,
-  addMessage: PropTypes.func.isRequired,
-  result: PropTypes.object.isRequired,
-  info: PropTypes.object.isRequired,
-  message: PropTypes.string.isRequired
+  result: PropTypes.object.isRequired
 };

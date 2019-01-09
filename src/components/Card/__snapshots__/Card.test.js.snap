@@ -36,10 +36,12 @@ ShallowWrapper {
             className="far fa-bookmark"
             id="bookmark"
             onClick={[Function]}
+            title="Must Read List"
           />
         </button>,
         <button
           className="search-btn"
+          title="Find Similar"
         >
           <i
             className="fas fa-search"
@@ -68,6 +70,7 @@ ShallowWrapper {
             className="far fa-bookmark"
             id="bookmark"
             onClick={[Function]}
+            title="Must Read List"
           />,
         },
         "ref": null,
@@ -79,6 +82,7 @@ ShallowWrapper {
             "className": "far fa-bookmark",
             "id": "bookmark",
             "onClick": [Function],
+            "title": "Must Read List",
           },
           "ref": null,
           "rendered": null,
@@ -97,6 +101,7 @@ ShallowWrapper {
             onClick={[Function]}
           />,
           "className": "search-btn",
+          "title": "Find Similar",
         },
         "ref": null,
         "rendered": Object {
@@ -152,10 +157,12 @@ ShallowWrapper {
               className="far fa-bookmark"
               id="bookmark"
               onClick={[Function]}
+              title="Must Read List"
             />
           </button>,
           <button
             className="search-btn"
+            title="Find Similar"
           >
             <i
               className="fas fa-search"
@@ -184,6 +191,7 @@ ShallowWrapper {
               className="far fa-bookmark"
               id="bookmark"
               onClick={[Function]}
+              title="Must Read List"
             />,
           },
           "ref": null,
@@ -195,6 +203,7 @@ ShallowWrapper {
               "className": "far fa-bookmark",
               "id": "bookmark",
               "onClick": [Function],
+              "title": "Must Read List",
             },
             "ref": null,
             "rendered": null,
@@ -213,6 +222,7 @@ ShallowWrapper {
               onClick={[Function]}
             />,
             "className": "search-btn",
+            "title": "Find Similar",
           },
           "ref": null,
           "rendered": Object {
@@ -312,10 +322,12 @@ ShallowWrapper {
             className="far fa-bookmark"
             id="bookmark"
             onClick={[Function]}
+            title="Must Read List"
           />
         </button>,
         <button
           className="search-btn"
+          title="Find Similar"
         >
           <i
             className="fas fa-search"
@@ -344,6 +356,7 @@ ShallowWrapper {
             className="far fa-bookmark"
             id="bookmark"
             onClick={[Function]}
+            title="Must Read List"
           />,
         },
         "ref": null,
@@ -355,6 +368,7 @@ ShallowWrapper {
             "className": "far fa-bookmark",
             "id": "bookmark",
             "onClick": [Function],
+            "title": "Must Read List",
           },
           "ref": null,
           "rendered": null,
@@ -373,6 +387,7 @@ ShallowWrapper {
             onClick={[Function]}
           />,
           "className": "search-btn",
+          "title": "Find Similar",
         },
         "ref": null,
         "rendered": Object {
@@ -428,10 +443,12 @@ ShallowWrapper {
               className="far fa-bookmark"
               id="bookmark"
               onClick={[Function]}
+              title="Must Read List"
             />
           </button>,
           <button
             className="search-btn"
+            title="Find Similar"
           >
             <i
               className="fas fa-search"
@@ -460,6 +477,7 @@ ShallowWrapper {
               className="far fa-bookmark"
               id="bookmark"
               onClick={[Function]}
+              title="Must Read List"
             />,
           },
           "ref": null,
@@ -471,6 +489,7 @@ ShallowWrapper {
               "className": "far fa-bookmark",
               "id": "bookmark",
               "onClick": [Function],
+              "title": "Must Read List",
             },
             "ref": null,
             "rendered": null,
@@ -489,6 +508,7 @@ ShallowWrapper {
               onClick={[Function]}
             />,
             "className": "search-btn",
+            "title": "Find Similar",
           },
           "ref": null,
           "rendered": Object {

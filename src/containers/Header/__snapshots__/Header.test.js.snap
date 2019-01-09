@@ -27,6 +27,7 @@ ShallowWrapper {
       "children": Array [
         <Link
           className="header-link"
+          onClick={[Function]}
           replace={false}
           to="/MustReadList"
         >
@@ -80,7 +81,7 @@ ShallowWrapper {
         "props": Object {
           "children": "Must Read List",
           "className": "header-link",
-          "onClick": undefined,
+          "onClick": [Function],
           "replace": false,
           "to": "/MustReadList",
         },
@@ -294,6 +295,7 @@ ShallowWrapper {
         "children": Array [
           <Link
             className="header-link"
+            onClick={[Function]}
             replace={false}
             to="/MustReadList"
           >
@@ -347,7 +349,7 @@ ShallowWrapper {
           "props": Object {
             "children": "Must Read List",
             "className": "header-link",
-            "onClick": undefined,
+            "onClick": [Function],
             "replace": false,
             "to": "/MustReadList",
           },

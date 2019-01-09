@@ -224,7 +224,7 @@ ShallowWrapper {
         "rendered": Array [
           Object {
             "instance": null,
-            "key": undefined,
+            "key": "Into the Wild",
             "nodeType": "class",
             "props": Object {
               "addBookList": [MockFunction],
@@ -244,7 +244,7 @@ ShallowWrapper {
           },
           Object {
             "instance": null,
-            "key": undefined,
+            "key": "Looking for Alaska",
             "nodeType": "class",
             "props": Object {
               "addBookList": [MockFunction],
@@ -438,7 +438,7 @@ ShallowWrapper {
           "rendered": Array [
             Object {
               "instance": null,
-              "key": undefined,
+              "key": "Into the Wild",
               "nodeType": "class",
               "props": Object {
                 "addBookList": [MockFunction],
@@ -458,7 +458,7 @@ ShallowWrapper {
             },
             Object {
               "instance": null,
-              "key": undefined,
+              "key": "Looking for Alaska",
               "nodeType": "class",
               "props": Object {
                 "addBookList": [MockFunction],
@@ -554,7 +554,9 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         <Connect(Message) />,
-        <h2>
+        <h2
+          className="must-read"
+        >
           Must Read List
         </h2>,
         <div
@@ -612,6 +614,7 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": "Must Read List",
+          "className": "must-read",
         },
         "ref": null,
         "rendered": "Must Read List",
@@ -662,7 +665,7 @@ ShallowWrapper {
         "rendered": Array [
           Object {
             "instance": null,
-            "key": undefined,
+            "key": "Into the Wild",
             "nodeType": "class",
             "props": Object {
               "addBookList": [MockFunction],
@@ -684,7 +687,7 @@ ShallowWrapper {
           },
           Object {
             "instance": null,
-            "key": undefined,
+            "key": "Looking for Alaska",
             "nodeType": "class",
             "props": Object {
               "addBookList": [MockFunction],
@@ -718,7 +721,9 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <Connect(Message) />,
-          <h2>
+          <h2
+            className="must-read"
+          >
             Must Read List
           </h2>,
           <div
@@ -776,6 +781,7 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": "Must Read List",
+            "className": "must-read",
           },
           "ref": null,
           "rendered": "Must Read List",
@@ -826,7 +832,7 @@ ShallowWrapper {
           "rendered": Array [
             Object {
               "instance": null,
-              "key": undefined,
+              "key": "Into the Wild",
               "nodeType": "class",
               "props": Object {
                 "addBookList": [MockFunction],
@@ -848,7 +854,7 @@ ShallowWrapper {
             },
             Object {
               "instance": null,
-              "key": undefined,
+              "key": "Looking for Alaska",
               "nodeType": "class",
               "props": Object {
                 "addBookList": [MockFunction],
@@ -935,7 +941,9 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         <Connect(Message) />,
-        <h2>
+        <h2
+          className="must-read"
+        >
           Must Read List
         </h2>,
         <div
@@ -964,6 +972,7 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": "Must Read List",
+          "className": "must-read",
         },
         "ref": null,
         "rendered": "Must Read List",
@@ -1004,7 +1013,9 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <Connect(Message) />,
-          <h2>
+          <h2
+            className="must-read"
+          >
             Must Read List
           </h2>,
           <div
@@ -1033,6 +1044,7 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": "Must Read List",
+            "className": "must-read",
           },
           "ref": null,
           "rendered": "Must Read List",
@@ -1238,7 +1250,9 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         <Connect(Message) />,
-        <h2>
+        <h2
+          className="must-read"
+        >
           Must Read List
         </h2>,
         <div
@@ -1296,6 +1310,7 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": "Must Read List",
+          "className": "must-read",
         },
         "ref": null,
         "rendered": "Must Read List",
@@ -1346,7 +1361,7 @@ ShallowWrapper {
         "rendered": Array [
           Object {
             "instance": null,
-            "key": undefined,
+            "key": "Into the Wild",
             "nodeType": "class",
             "props": Object {
               "addBookList": [MockFunction],
@@ -1368,7 +1383,7 @@ ShallowWrapper {
           },
           Object {
             "instance": null,
-            "key": undefined,
+            "key": "Looking for Alaska",
             "nodeType": "class",
             "props": Object {
               "addBookList": [MockFunction],
@@ -1402,7 +1417,9 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <Connect(Message) />,
-          <h2>
+          <h2
+            className="must-read"
+          >
             Must Read List
           </h2>,
           <div
@@ -1460,6 +1477,7 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": "Must Read List",
+            "className": "must-read",
           },
           "ref": null,
           "rendered": "Must Read List",
@@ -1510,7 +1528,7 @@ ShallowWrapper {
           "rendered": Array [
             Object {
               "instance": null,
-              "key": undefined,
+              "key": "Into the Wild",
               "nodeType": "class",
               "props": Object {
                 "addBookList": [MockFunction],
@@ -1532,7 +1550,7 @@ ShallowWrapper {
             },
             Object {
               "instance": null,
-              "key": undefined,
+              "key": "Looking for Alaska",
               "nodeType": "class",
               "props": Object {
                 "addBookList": [MockFunction],
