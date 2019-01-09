@@ -6,6 +6,7 @@
   height: 450px;
   text-align: center;
   box-shadow: 4px 4px 7px rgba(32, 32, 32, 0.835);
+  transition: all 0.3s ease;
   h1{
     font-size: 2rem;
     font-weight: bold;
@@ -23,10 +24,20 @@
     font-size: 2rem;
     padding: 10px;
     float: left;
+    &:hover{
+      cursor: pointer;
+      color: #000;
+    }
   }
   .search-btn {
     float: right;
     font-size: 1.8rem;
+  }
+  &:hover {
+    box-shadow: 
+      rgba(0, 0, 0, 0.582) 4px 4px 10px,
+      rgba(0, 0, 0, 0.582) 2px 0px 10px;
+    transform: scale(1.05);
   }
 }
 

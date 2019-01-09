@@ -31,7 +31,7 @@ export const CardContainer = ({ results, info, location, addBookList, removeBook
           isFavorite = true      
         }
       })
-    return <Card result={result} addBookList={addBookList} removeBookList={removeBookList} sendSearch={sendSearch} getBookList={getBookList} addMessage={addMessage} isFavorite={isFavorite}/>
+    return <Card result={result} key={result.Name} addBookList={addBookList} removeBookList={removeBookList} sendSearch={sendSearch} getBookList={getBookList} addMessage={addMessage} isFavorite={isFavorite}/>
   })
 
   if (isLoading) {
@@ -47,7 +47,7 @@ export const CardContainer = ({ results, info, location, addBookList, removeBook
   if (loc === '/MustReadList') {
     if (bookList.length) {
       cards = bookList.map(result => {
-        return <Card result={result} addBookList={addBookList} removeBookList={removeBookList} sendSearch={sendSearch} getBookList={getBookList} message={message} addMessage={addMessage} loc={loc} isFavorite={true}/>
+        return <Card result={result} key={result.Name} addBookList={addBookList} removeBookList={removeBookList} sendSearch={sendSearch} getBookList={getBookList} message={message} addMessage={addMessage} loc={loc} isFavorite={true}/>
       })
     } else {
       cards = <h3>There are no Books on Your Reading List</h3>
@@ -55,7 +55,7 @@ export const CardContainer = ({ results, info, location, addBookList, removeBook
     return (
       <main>
         <Message />
-        <h2>Must Read List</h2>
+        <h2 className="must-read">Must Read List</h2>
         <div className="card-container">
           {cards}
         </div>
