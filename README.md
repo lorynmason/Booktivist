@@ -1,68 +1,51 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# BOOKTIVIST
 
-## Available Scripts
+a book reccomendation site for activist, find your next must read book
 
-In the project directory, you can run:
+### Setup Instructions
 
-### `npm start`
+````
+go to https://tastedive.com/read/api request an api key
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+git clone 
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+open in code editor
 
-### `npm test`
+create a file in src called apikey.js
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+set up file like this:
+export const key = 'your key here'
 
-### `npm run build`
+npm install
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+npm start
+````
+### Abstract:
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+Booktivist is a solo project, I was given a random api and user to make an app for. 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+### Tech used:
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+  * React
+  * Redux
+  * Router
+  * Asynchronous Javascript
+  
+### Wire Frames:
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+<img width="985" alt="screen shot 2019-01-09 at 8 37 34 am" src="https://user-images.githubusercontent.com/40005248/50909890-f6c62800-13e9-11e9-8d1c-26b06f278e16.png">
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+<img width="722" alt="screen shot 2019-01-09 at 8 37 54 am" src="https://user-images.githubusercontent.com/40005248/50909848-e746df00-13e9-11e9-9252-b0a4f998182e.png">
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### Screenshots: 
 
-## Learn More
+<img width="1237" alt="screen shot 2019-01-09 at 8 39 56 am" src="https://user-images.githubusercontent.com/40005248/50910128-663c1780-13ea-11e9-8ece-fc5d8a981b4f.png">
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+<img width="1426" alt="screen shot 2019-01-09 at 8 40 41 am" src="https://user-images.githubusercontent.com/40005248/50910158-7522ca00-13ea-11e9-8fdb-1810e452e611.png">
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+<img width="1440" alt="screen shot 2019-01-09 at 8 41 30 am" src="https://user-images.githubusercontent.com/40005248/50910180-85d34000-13ea-11e9-908a-dc24eb641f27.png">
 
-### Code Splitting
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
 
-### Analyzing the Bundle Size
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
