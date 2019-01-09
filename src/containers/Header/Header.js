@@ -36,6 +36,10 @@ export class Header extends Component {
     })
   }
 
+  closeSplash = () => {
+    this.setState({header: true})
+  }
+
   render() {
     const { header } = this.state
     let headerClass = 'header-false'
@@ -44,7 +48,7 @@ export class Header extends Component {
     }
     return (
       <div className={headerClass}>
-        <Link to='/MustReadList' onClick={this.toggleHeader} className='header-link'>Must Read List</Link>
+        <Link to='/MustReadList' onClick={this.closeSplash} className='header-link'>Must Read List</Link>
         <header>
           <div className="title-search">
             <h1>Booktivist</h1>

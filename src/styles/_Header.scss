@@ -7,7 +7,7 @@
   .header-link {
     font-family: $titleFont;
     text-decoration: none;
-    font-size: 2rem;
+    font-size: 2.5rem;
     color: black;
     float: right;
     margin: 15px;
@@ -67,11 +67,11 @@
 }
 
 .header-false {
-  @include headers(100vh, 770px, 10px);
+  @include headers(100vh, 97vh, 10px);
 }
 
 .header-true {
-  @include headers(40vh, 300px, 5px);
+  @include headers(320px, 300px, 5px);
   img {
     animation: shrink 1.5s linear;
   }
@@ -84,5 +84,11 @@
     img {
       height: 675px;
     }
+  }
+}
+
+@media (max-width: 1078px ) {
+  .header-true {
+    @include headers(380px, 300px, 5px);
   }
 }

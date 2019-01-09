@@ -10,7 +10,18 @@
 
 .sorry {
   @include h2();
-  margin: 100px 0;
+  margin: 80px 0;
+}
+
+h3 {
+  font-size: 4rem;
+  font-family: $titleFont;
+  text-align: center;
+}
+
+.must-read {
+  font-size: 6rem;
+  margin: 0;
 }
 
 .card-container {
