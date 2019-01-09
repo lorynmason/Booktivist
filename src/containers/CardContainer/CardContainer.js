@@ -106,5 +106,4 @@ CardContainer.propTypes = {
   addMessage: PropTypes.func.isRequired,
   results: PropTypes.array.isRequired,
   bookList: PropTypes.array.isRequired,
-  info: PropTypes.object.isRequired,
 };
