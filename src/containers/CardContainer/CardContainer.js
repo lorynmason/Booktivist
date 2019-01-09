@@ -8,6 +8,7 @@ import { removeBookList } from '../../helpers/removeBookList';
 import { fetchBooks } from '../../thunks/fetchBooks';
 import { Loader } from '../../components/Loader/Loader';
 import { getBookList } from '../../helpers/getBookList';
+import PropTypes from 'prop-types';
 
 export const CardContainer = ({ results, info, location, addBookList, removeBookList, bookList, sendSearch, isLoading, message, getBookList, addMessage}) => {
 
@@ -96,3 +97,14 @@ export default connect(
   mapStateToProps,
   mapDispatchToProps
 )(CardContainer);
+
+CardContainer.propTypes = {
+  removeBookList: PropTypes.func.isRequired,
+  addBookList: PropTypes.func.isRequired, 
+  sendSearch: PropTypes.func.isRequired,
+  getBookList: PropTypes.func.isRequired,
+  addMessage: PropTypes.func.isRequired,
+  results: PropTypes.array.isRequired,
+  bookList: PropTypes.array.isRequired,
+  info: PropTypes.object.isRequired,
+};
