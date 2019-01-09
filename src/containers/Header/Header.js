@@ -4,7 +4,6 @@ import { fetchBooks } from '../../thunks/fetchBooks';
 import { Link } from 'react-router-dom';
 import { withRouter } from 'react-router';
 
-
 export class Header extends Component {
   constructor(){
     super()
@@ -22,9 +21,10 @@ export class Header extends Component {
   }
 
   handleSubmit = (e) => {
+    const { search } = this.state
     e.preventDefault()
-    if (this.state.search) {
-      this.props.sendSearch(this.state.search)
+    if (search) {
+      this.props.sendSearch(search)
       this.setState({header: true, search: ''})
     }
   }
