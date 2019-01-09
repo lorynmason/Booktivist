@@ -1,6 +1,6 @@
 # BOOKTIVIST
 
-a book reccomendation site for activist, find your next must read book
+a book reccomendation site for activist, find your next must-read book
 
 ### Setup Instructions
 
@@ -22,7 +22,7 @@ npm start
 ````
 ### Abstract:
 
-Booktivist is a solo project, I was given a random api and user to make an app for. 
+Booktivist is a solo project, I was given a random api and user to make an app for, Taste Dive api and activist, I came up with Booktivist. The user can search for a book or author, the search results give infomation for what was searched and up to 20 book recommendations. The user can also find similar books for their recommendations and add books to their Must-Read List.
 
 
 ### Tech used:
