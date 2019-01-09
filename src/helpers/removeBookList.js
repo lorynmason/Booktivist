@@ -7,6 +7,5 @@ export const removeBookList = (book) => {
     localStorage.setItem('bookList', JSON.stringify(updatedList))
     dispatch(removeFromBookList(updatedList))
     dispatch(addMessage(`${book.Name} was Removed from Your Must Read List`))
-
   }
 }
