@@ -3,6 +3,8 @@ import { connect } from 'react-redux';
 import { fetchBooks } from '../../thunks/fetchBooks';
 import { Link } from 'react-router-dom';
 import { withRouter } from 'react-router';
+import PropTypes from 'prop-types';
+
 
 export class Header extends Component {
   constructor(){
@@ -73,3 +75,7 @@ export default withRouter(connect(
   null,
   mapDispatchToProps
 )(Header));
+
+Header.propTypes = { 
+  sendSearch: PropTypes.func.isRequired,
+};

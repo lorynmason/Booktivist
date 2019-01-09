@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { addMessage } from '../../actions';
+import PropTypes from 'prop-types';
 
 export const Message = ({ message, addMessage}) => {
   setTimeout(() => {
@@ -32,3 +33,8 @@ export const mapDispatchToProps = (dispatch) => ({
 export default connect(
   mapStateToProps, mapDispatchToProps
 )(Message);
+
+Message.propTypes = {
+  addMessage: PropTypes.func.isRequired,
+  message: PropTypes.string.isRequired
+};

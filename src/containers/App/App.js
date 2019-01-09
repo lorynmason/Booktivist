@@ -6,6 +6,8 @@ import '../../styles/main.scss'
 import { connect } from 'react-redux';
 import { Route, withRouter, Switch } from 'react-router';
 import { getBookList } from '../../helpers/getBookList';
+import PropTypes from 'prop-types';
+
 
 export class App extends Component {
   componentDidMount(){
@@ -34,3 +36,7 @@ export default withRouter(connect(
   null,
   mapDispatchToProps
 )(App));
+
+App.propTypes = {
+  getBookList: PropTypes.func.isRequired
+};

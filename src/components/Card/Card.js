@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { Redirect } from 'react-router';
+import PropTypes from 'prop-types';
+
 
 export class Card extends Component { 
   handleClick = () => {
@@ -39,3 +41,13 @@ export class Card extends Component {
 }
 
 export default Card
+
+Card.propTypes = {
+  removeBookList: PropTypes.func.isRequired,
+  addBookList: PropTypes.func.isRequired, 
+  sendSearch: PropTypes.func.isRequired,
+  addMessage: PropTypes.func.isRequired,
+  result: PropTypes.object.isRequired,
+  info: PropTypes.object.isRequired,
+  message: PropTypes.string.isRequired
+};
