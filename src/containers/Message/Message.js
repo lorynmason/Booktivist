@@ -2,24 +2,22 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { addMessage } from '../../actions';
 
-export const Message = (props) => {
+export const Message = ({ message, addMessage}) => {
   setTimeout(() => {
-    props.addMessage('')
+    addMessage('')
   }, 5000);
 
-  if(props.message) {
+  if(message) {
     return (
       <div className="message-container">
         <p>
-          {props.message}
+          {message}
         </p>
       </div>
     )
   }
   return (
-    <div className="blah">
-
-    </div>
+    <div className="blah"></div>
   )
 }
 

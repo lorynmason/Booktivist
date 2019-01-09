@@ -2,36 +2,37 @@ import React, { Component } from 'react';
 import { Redirect } from 'react-router';
 
 export class Card extends Component { 
-  
   handleClick = () => {
-    if (!this.props.isFavorite) {
-      this.props.addBookList(this.props.result)
+    const { isFavorite, result, addBookList, removeBookList } = this.props
+    if (!isFavorite) {
+      addBookList(result)
     } else {
-      this.props.removeBookList(this.props.result)
+      removeBookList(result)
     }
   }
   
   findSimilar = () => {
-    this.props.sendSearch(this.props.result.Name)
+    const {sendSearch, result } = this.props
+    sendSearch(result.Name)
   }
 
   render() {
     let bookmark = "far fa-bookmark"
-    const { isFavorite } = this.props
+    const { isFavorite, loc, message, result } = this.props
     let page;
-    if (this.props.loc === '/MustReadList' && this.props.message === 'Found Similar Books!') {
+    if (loc === '/MustReadList' && message === 'Found Similar Books!') {
       page = <Redirect to ='/SearchResults' />
     }
     if (isFavorite) {
       bookmark = "fas fa-bookmark"
     }
     return (
-    <div className="card" key={this.props.result.Name}>
+    <div className="card" key={result.Name}>
       {page}
       <button><i className={bookmark} id='bookmark' onClick={this.handleClick}></i></button>
       <button className="search-btn"><i className="fas fa-search" id='search' onClick={this.findSimilar}></i></button>
-      <h1>{this.props.result.Name}</h1>
-      <p>{this.props.result.wTeaser}</p>
+      <h1>{result.Name}</h1>
+      <p>{result.wTeaser}</p>
     </div>
     )
   } 
