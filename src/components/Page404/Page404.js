@@ -1,7 +1,7 @@
 import React from 'react'
 
-export const Page404 = (props) => {
-  if(props.location.pathname === '/') {
+export const Page404 = ({ location }) => {
+  if(location.pathname === '/') {
     return (<div></div>)
   }
   return (

@@ -7,12 +7,13 @@ export class Card extends Component {
     if (!isFavorite) {
       addBookList(result)
     } else {
-      removeBookList(this.props.result)
+      removeBookList(result)
     }
   }
   
   findSimilar = () => {
-    this.props.sendSearch(this.props.result.Name)
+    const {sendSearch, result } = this.props
+    sendSearch(result.Name)
   }
 
   render() {
