@@ -10,18 +10,23 @@ import { Loader } from '../../components/Loader/Loader';
 import { getBookList } from '../../helpers/getBookList';
 import PropTypes from 'prop-types';
 
-export const CardContainer = ({ results, info, location, addBookList, removeBookList, bookList, sendSearch, isLoading, message, getBookList, addMessage}) => {
-
-  let isFavorite = false
+export const CardContainer = ({ results, info, location, addBookList, removeBookList, bookList, sendSearch, isLoading, message, getBookList, addMessage }) => {
   
-  let infoCard = <Card result={info} addBookList={addBookList} removeBookList={removeBookList} bookList={bookList} sendSearch={sendSearch} addMessage={addMessage} isFavorite={isFavorite}/>
+  const loc = location.pathname;
+  let isFavorite = false
+
+  const makeCards = (data, fav) => {
+    return <Card result={data} key={data.Name} addBookList={addBookList} removeBookList={removeBookList} sendSearch={sendSearch} getBookList={getBookList} message={message} addMessage={addMessage} loc={loc} isFavorite={fav}/>
+  }
+  
+  let infoCard = makeCards(info, isFavorite)
   
   if(bookList) {
     bookList.forEach(item => {
       if (item.Name === info.Name) {
         isFavorite = true     
       }
-      infoCard = <Card result={info} addBookList={addBookList} removeBookList={removeBookList} sendSearch={sendSearch} getBookList={getBookList} addMessage={addMessage} isFavorite={isFavorite}/>
+      infoCard = makeCards(info, isFavorite)
     })
   } 
   
@@ -32,7 +37,7 @@ export const CardContainer = ({ results, info, location, addBookList, removeBook
           isFavorite = true      
         }
       })
-    return <Card result={result} key={result.Name} addBookList={addBookList} removeBookList={removeBookList} sendSearch={sendSearch} getBookList={getBookList} addMessage={addMessage} isFavorite={isFavorite}/>
+    return makeCards(result, isFavorite)
   })
 
   if (isLoading) {
@@ -43,12 +48,10 @@ export const CardContainer = ({ results, info, location, addBookList, removeBook
     return <h2 className='sorry'>Sorry didn't find anything</h2>
   }
 
-  const loc = location.pathname;
-
   if (loc === '/MustReadList') {
     if (bookList.length) {
       cards = bookList.map(result => {
-        return <Card result={result} key={result.Name} addBookList={addBookList} removeBookList={removeBookList} sendSearch={sendSearch} getBookList={getBookList} message={message} addMessage={addMessage} loc={loc} isFavorite={true}/>
+        return makeCards(result, true)
       })
     } else {
       cards = <h3>There are no Books on Your Reading List</h3>
@@ -63,6 +66,7 @@ export const CardContainer = ({ results, info, location, addBookList, removeBook
       </main>
     )
   }
+
   return (
     <main>
       <Message />

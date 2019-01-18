@@ -5,7 +5,6 @@ import { Link } from 'react-router-dom';
 import { withRouter } from 'react-router';
 import PropTypes from 'prop-types';
 
-
 export class Header extends Component {
   constructor(){
     super()
@@ -53,7 +52,7 @@ export class Header extends Component {
         <Link to='/MustReadList' onClick={this.closeSplash} className='header-link'>Must Read List</Link>
         <header>
           <div className="title-search">
-            <h1>Booktivist</h1>
+            <h1><Link to ='/' >Booktivist</Link></h1>
             <h3>Read up, so You can Speak up</h3>
             <form onSubmit={this.handleSubmit}>
               <input placeholder="Search for Authors or Books" name="search" value={this.state.search} onChange={this.handleChange}></input>
