@@ -1,4 +1,4 @@
-
+$fontColor:rgb(224, 220, 220);
 @mixin headers($height, $imgHeight, $paddingTop) {
   background: $backgroundColor;
   height: $height;
@@ -8,7 +8,8 @@
     font-family: $titleFont;
     text-decoration: none;
     font-size: 2.5rem;
-    color: black;
+    color: $fontColor;
+    text-shadow: 8px 5px 6px black;
     float: right;
     margin: 15px;
     height: 5vh;
@@ -16,28 +17,39 @@
   header {
     img {
       height: $imgHeight;
+      filter: invert(90%) opacity(100%) drop-shadow(25px -16px 1px $accentColor);
     }
     display: flex;
     justify-content: center;
     align-items: center;
     font-family: $titleFont;
-    color: rgb(0, 0, 0);
     padding-top: $paddingTop;
     div { 
       text-align: center;
       margin: 10px 60px 10px 80px;
       h1{
+        transition: all 0.3s ease;
         font-size: 10rem;
-        text-shadow: 6px 3px $accentColor;
+        text-shadow: 6px 3px $accentColor, 12px 5px 6px black;
+        a{
+          text-decoration: none;
+          color: $fontColor;
+        }
+        &:hover {
+          transform: scale(1.03);          
+        }
       }
       h3 {
         font-size: 4rem;
+        color: $fontColor;
+        text-shadow: 8px 5px 6px black;
       }
       input {
-        margin-top: 25px;
+        margin-top: 26px;
         width: 220px;
-        height: 30px;
+        height: 36px;
         outline: none;
+        border: none;
         font-family: $titleFont;
         font-size: 1.6rem;
         &::placeholder {
@@ -46,7 +58,7 @@
         }
       }
       button{
-        height: 34px;
+        height: 38px;
         width: 88px;
         border: none;
         font-size: 1.6rem;
@@ -58,7 +70,7 @@
         }
         a {
           text-decoration: none;
-          color: black;
+          color: $fontColor;
           padding: 10px 17px;
         }
       }
