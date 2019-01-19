@@ -6,10 +6,11 @@ $titleFont: 'Engagement', cursive;
 $mainFont: 'Anaheim', sans-serif;
 
 //colors
-// $backroundColor: rgba(160, 137, 107, 0.5);
-$backgroundColor: rgba(36, 36, 36, 0.877);
+$backgroundColor: rgba(17, 17, 17, 0.877);
 $fontColor:rgb(224, 220, 220);
-$accentColor: rgb(114, 23, 23);
+// $accentColor: rgb(114, 23, 23);
+$accentColor: #53707c;
+$accentColor2: #b6d5d0;
 
 * {
  box-sizing: border-box;

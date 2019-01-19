@@ -38,7 +38,12 @@ ShallowWrapper {
             className="title-search"
           >
             <h1>
-              Booktivist
+              <Link
+                replace={false}
+                to="/"
+              >
+                Booktivist
+              </Link>
             </h1>
             <h3>
               Read up, so You can Speak up
@@ -99,7 +104,12 @@ ShallowWrapper {
               className="title-search"
             >
               <h1>
-                Booktivist
+                <Link
+                  replace={false}
+                  to="/"
+                >
+                  Booktivist
+                </Link>
               </h1>
               <h3>
                 Read up, so You can Speak up
@@ -140,7 +150,12 @@ ShallowWrapper {
             "props": Object {
               "children": Array [
                 <h1>
-                  Booktivist
+                  <Link
+                    replace={false}
+                    to="/"
+                  >
+                    Booktivist
+                  </Link>
                 </h1>,
                 <h3>
                   Read up, so You can Speak up
@@ -175,10 +190,27 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
-                  "children": "Booktivist",
+                  "children": <Link
+                    replace={false}
+                    to="/"
+                  >
+                    Booktivist
+                  </Link>,
                 },
                 "ref": null,
-                "rendered": "Booktivist",
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "class",
+                  "props": Object {
+                    "children": "Booktivist",
+                    "replace": false,
+                    "to": "/",
+                  },
+                  "ref": null,
+                  "rendered": "Booktivist",
+                  "type": [Function],
+                },
                 "type": "h1",
               },
               Object {
@@ -306,7 +338,12 @@ ShallowWrapper {
               className="title-search"
             >
               <h1>
-                Booktivist
+                <Link
+                  replace={false}
+                  to="/"
+                >
+                  Booktivist
+                </Link>
               </h1>
               <h3>
                 Read up, so You can Speak up
@@ -367,7 +404,12 @@ ShallowWrapper {
                 className="title-search"
               >
                 <h1>
-                  Booktivist
+                  <Link
+                    replace={false}
+                    to="/"
+                  >
+                    Booktivist
+                  </Link>
                 </h1>
                 <h3>
                   Read up, so You can Speak up
@@ -408,7 +450,12 @@ ShallowWrapper {
               "props": Object {
                 "children": Array [
                   <h1>
-                    Booktivist
+                    <Link
+                      replace={false}
+                      to="/"
+                    >
+                      Booktivist
+                    </Link>
                   </h1>,
                   <h3>
                     Read up, so You can Speak up
@@ -443,10 +490,27 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
-                    "children": "Booktivist",
+                    "children": <Link
+                      replace={false}
+                      to="/"
+                    >
+                      Booktivist
+                    </Link>,
                   },
                   "ref": null,
-                  "rendered": "Booktivist",
+                  "rendered": Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "class",
+                    "props": Object {
+                      "children": "Booktivist",
+                      "replace": false,
+                      "to": "/",
+                    },
+                    "ref": null,
+                    "rendered": "Booktivist",
+                    "type": [Function],
+                  },
                   "type": "h1",
                 },
                 Object {

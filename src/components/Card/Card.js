@@ -34,7 +34,9 @@ export class Card extends Component {
       <button><i title="Must Read List" className={bookmark} id='bookmark' onClick={this.handleClick}></i></button>
       <button title="Find Similar" className="search-btn"><i className="fas fa-search" id='search' onClick={this.findSimilar}></i></button>
       <h1>{result.Name}</h1>
-      <p>{result.wTeaser}</p>
+      <div>
+        <p>{result.wTeaser}</p>
+      </div>
     </div>
     )
   } 
