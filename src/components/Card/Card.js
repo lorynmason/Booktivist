@@ -14,7 +14,7 @@ export class Card extends Component {
   }
   
   findSimilar = () => {
-    const {sendSearch, result } = this.props
+    const { sendSearch, result } = this.props
     sendSearch(result.Name)
   }
 

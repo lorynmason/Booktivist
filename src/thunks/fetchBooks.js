@@ -15,11 +15,7 @@ export const fetchBooks = (search) => {
       if (results.Similar.Results.length) {
         dispatch(addMessage('Found Similar Books!'))
         dispatch(addSearchResults(results.Similar.Results))
-        const info = results.Similar.Info.reduce((obj, item) => {
-          obj= item
-          return obj
-        }, {})
-        dispatch(addSearchInfo(info))
+        dispatch(addSearchInfo(results.Similar.Info))
       } else {
         dispatch(addSearchResults([]))
         dispatch(addSearchInfo({}))
