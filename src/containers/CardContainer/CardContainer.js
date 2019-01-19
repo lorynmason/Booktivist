@@ -53,7 +53,7 @@ export const CardContainer = ({ results, info, location, addBookList, removeBook
         return makeCards(result, true)
       })
     } else {
-      cards = <h3>There are no Books on Your Reading List</h3>
+      cards = <h3>There are no Books on Your Must Read List</h3>
     }
     return (
       <main>
