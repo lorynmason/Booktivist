@@ -12,6 +12,9 @@
     float: right;
     margin: 15px;
     height: 5vh;
+    &:hover {
+      color: $accentColor2;
+    }
   }
   header {
     img {
