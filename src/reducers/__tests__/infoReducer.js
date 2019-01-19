@@ -14,7 +14,7 @@ describe('infoReducer', () => {
     }
     const mockAction = {
       type: 'ADD_INFO',
-      info: mockInfo
+      info: [mockInfo]
     };
     const expected = mockInfo
 
