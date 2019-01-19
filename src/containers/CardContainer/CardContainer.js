@@ -11,8 +11,7 @@ import { getBookList } from '../../helpers/getBookList';
 import PropTypes from 'prop-types';
 
 export const CardContainer = ({ results, info, location, addBookList, removeBookList, bookList, sendSearch, isLoading, message, getBookList, addMessage }) => {
-  
-  const loc = location.pathname;
+  const loc = location.pathname
   let isFavorite = false
 
   const makeCards = (data, fav) => {
