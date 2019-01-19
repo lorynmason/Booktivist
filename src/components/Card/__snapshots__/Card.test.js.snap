@@ -52,9 +52,11 @@ ShallowWrapper {
         <h1>
           Into the Wild
         </h1>,
-        <p>
-          Into the Wild
-        </p>,
+        <div>
+          <p>
+            Into the Wild
+          </p>
+        </div>,
       ],
       "className": "card",
     },
@@ -135,11 +137,23 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": "Into the Wild",
+          "children": <p>
+            Into the Wild
+          </p>,
         },
         "ref": null,
-        "rendered": "Into the Wild",
-        "type": "p",
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Into the Wild",
+          },
+          "ref": null,
+          "rendered": "Into the Wild",
+          "type": "p",
+        },
+        "type": "div",
       },
     ],
     "type": "div",
@@ -173,9 +187,11 @@ ShallowWrapper {
           <h1>
             Into the Wild
           </h1>,
-          <p>
-            Into the Wild
-          </p>,
+          <div>
+            <p>
+              Into the Wild
+            </p>
+          </div>,
         ],
         "className": "card",
       },
@@ -256,11 +272,23 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": "Into the Wild",
+            "children": <p>
+              Into the Wild
+            </p>,
           },
           "ref": null,
-          "rendered": "Into the Wild",
-          "type": "p",
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Into the Wild",
+            },
+            "ref": null,
+            "rendered": "Into the Wild",
+            "type": "p",
+          },
+          "type": "div",
         },
       ],
       "type": "div",
@@ -338,9 +366,11 @@ ShallowWrapper {
         <h1>
           Into the Wild
         </h1>,
-        <p>
-          Into the Wild
-        </p>,
+        <div>
+          <p>
+            Into the Wild
+          </p>
+        </div>,
       ],
       "className": "card",
     },
@@ -421,11 +451,23 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": "Into the Wild",
+          "children": <p>
+            Into the Wild
+          </p>,
         },
         "ref": null,
-        "rendered": "Into the Wild",
-        "type": "p",
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Into the Wild",
+          },
+          "ref": null,
+          "rendered": "Into the Wild",
+          "type": "p",
+        },
+        "type": "div",
       },
     ],
     "type": "div",
@@ -459,9 +501,11 @@ ShallowWrapper {
           <h1>
             Into the Wild
           </h1>,
-          <p>
-            Into the Wild
-          </p>,
+          <div>
+            <p>
+              Into the Wild
+            </p>
+          </div>,
         ],
         "className": "card",
       },
@@ -542,11 +586,23 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": "Into the Wild",
+            "children": <p>
+              Into the Wild
+            </p>,
           },
           "ref": null,
-          "rendered": "Into the Wild",
-          "type": "p",
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Into the Wild",
+            },
+            "ref": null,
+            "rendered": "Into the Wild",
+            "type": "p",
+          },
+          "type": "div",
         },
       ],
       "type": "div",
