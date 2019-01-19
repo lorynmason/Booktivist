@@ -68,7 +68,10 @@
         background: $accentColor;
         outline: none;
         &:hover {
-          filter: brightness(150%)
+          background: $accentColor2;
+          a {
+            color: black;
+          }
         }
         a {
           text-decoration: none;
