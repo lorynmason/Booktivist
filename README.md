@@ -2,6 +2,7 @@
 
 a book recommendation site for activist, find your next must-read book
 
+View [live site](https://booktivist.herokuapp.com/)
 ### Setup Instructions
 
 ````
