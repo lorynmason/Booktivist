@@ -1,6 +1,6 @@
 # BOOKTIVIST
 
-a book reccomendation site for activist, find your next must-read book
+a book recommendation site for activist, find your next must-read book
 
 ### Setup Instructions
 
