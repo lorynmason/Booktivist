@@ -32,6 +32,13 @@ Booktivist is a solo project, I was given a random api and user to make an app f
   * Redux
   * Router
   * Asynchronous Javascript
+  * Redux Thunks/Middleware
+  * Enzyme/Jest
+  * REST API
+  * HTML5
+  * SASS
+  * Git Rebase Workflow
+  * Github
   
 ### Wire Frames:
 
