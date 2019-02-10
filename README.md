@@ -34,17 +34,17 @@ Booktivist is a solo project, I was given a random api and user to make an app f
   
 ### Wire Frames:
 
-<img width="985" alt="screen shot 2019-01-09 at 8 37 34 am" src="https://user-images.githubusercontent.com/40005248/50909890-f6c62800-13e9-11e9-8d1c-26b06f278e16.png">
+<img width="700" alt="screen shot 2019-01-09 at 8 37 34 am" src="https://user-images.githubusercontent.com/40005248/50909890-f6c62800-13e9-11e9-8d1c-26b06f278e16.png">
 
-<img width="722" alt="screen shot 2019-01-09 at 8 37 54 am" src="https://user-images.githubusercontent.com/40005248/50909848-e746df00-13e9-11e9-9252-b0a4f998182e.png">
+<img width="700" alt="screen shot 2019-01-09 at 8 37 54 am" src="https://user-images.githubusercontent.com/40005248/50909848-e746df00-13e9-11e9-9252-b0a4f998182e.png">
 
 ### Screenshots: 
 
-<img width="1237" alt="screen shot 2019-01-09 at 8 39 56 am" src="https://user-images.githubusercontent.com/40005248/50910128-663c1780-13ea-11e9-8ece-fc5d8a981b4f.png">
+<img width="700" alt="screen shot 2019-02-10 at 12 43 39 pm" src="https://user-images.githubusercontent.com/40005248/52538613-f5ae5080-2d31-11e9-8a71-7b92530d69d2.png">
 
-<img width="1426" alt="screen shot 2019-01-09 at 8 40 41 am" src="https://user-images.githubusercontent.com/40005248/50910158-7522ca00-13ea-11e9-8fdb-1810e452e611.png">
+<img width="700" alt="screen shot 2019-02-10 at 12 45 28 pm" src="https://user-images.githubusercontent.com/40005248/52538617-052d9980-2d32-11e9-91d4-ea7b268d16af.png">
 
-<img width="1440" alt="screen shot 2019-01-09 at 8 41 30 am" src="https://user-images.githubusercontent.com/40005248/50910180-85d34000-13ea-11e9-908a-dc24eb641f27.png">
+<img width="700" alt="screen shot 2019-02-10 at 12 45 47 pm" src="https://user-images.githubusercontent.com/40005248/52538622-15457900-2d32-11e9-9ed0-986912048ba4.png">
 
 
 
